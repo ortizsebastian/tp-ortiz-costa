@@ -16,5 +16,11 @@ namespace tp_winforms_catalogo
         {
             InitializeComponent();
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            ArticuloNegocio negocio = new ArticuloNegocio();
+            dgvArticulos.DataSource = negocio.listar();
+        }
     }
 }
