@@ -12,7 +12,10 @@ namespace tp_winforms_catalogo
 {
     public partial class Form1 : Form
     {
-        private List<Articulo> ListaProductos;
+        private List<Articulo> ListaArticulos;
+        private List<Categoria> ListaCategorias;
+        private List<Marca> ListaMarcas;
+        
         public Form1()
         {
             InitializeComponent();
@@ -21,10 +24,21 @@ namespace tp_winforms_catalogo
         private void Form1_Load(object sender, EventArgs e)
         {
             ArticuloNegocio negocio = new ArticuloNegocio();
-            ListaProductos = negocio.listar();
-            dgvArticulos.DataSource = ListaProductos;
+            ListaArticulos = negocio.listar();
+            dgvArticulos.DataSource = ListaArticulos;
             dgvArticulos.Columns["ImagenUrl"].Visible = false;
-            cargarImagen(ListaProductos[0].ImagenUrl);
+            cargarImagen(ListaArticulos[0].ImagenUrl);
+
+
+            CategoriaNegocio negocio1 = new CategoriaNegocio();
+            ListaCategorias = negocio1.listar();
+            dgvCategorias.DataSource = ListaCategorias;
+
+
+            MarcaNegocio negocio2 = new MarcaNegocio();
+            ListaMarcas = negocio2.listar();
+            dgvMarcas.DataSource = ListaMarcas;
+
         }
 
         private void dgvArticulos_SelectionChanged(object sender, EventArgs e)

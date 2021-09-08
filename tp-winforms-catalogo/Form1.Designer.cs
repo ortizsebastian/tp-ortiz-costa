@@ -31,8 +31,12 @@ namespace tp_winforms_catalogo
         {
             this.dgvArticulos = new System.Windows.Forms.DataGridView();
             this.PbElectro = new System.Windows.Forms.PictureBox();
+            this.dgvCategorias = new System.Windows.Forms.DataGridView();
+            this.dgvMarcas = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dgvArticulos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PbElectro)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCategorias)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMarcas)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvArticulos
@@ -54,11 +58,29 @@ namespace tp_winforms_catalogo
             this.PbElectro.TabIndex = 1;
             this.PbElectro.TabStop = false;
             // 
+            // dgvCategorias
+            // 
+            this.dgvCategorias.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCategorias.Location = new System.Drawing.Point(12, 262);
+            this.dgvCategorias.Name = "dgvCategorias";
+            this.dgvCategorias.Size = new System.Drawing.Size(244, 114);
+            this.dgvCategorias.TabIndex = 2;
+            // 
+            // dgvMarcas
+            // 
+            this.dgvMarcas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvMarcas.Location = new System.Drawing.Point(12, 382);
+            this.dgvMarcas.Name = "dgvMarcas";
+            this.dgvMarcas.Size = new System.Drawing.Size(244, 136);
+            this.dgvMarcas.TabIndex = 3;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(803, 536);
+            this.Controls.Add(this.dgvMarcas);
+            this.Controls.Add(this.dgvCategorias);
             this.Controls.Add(this.PbElectro);
             this.Controls.Add(this.dgvArticulos);
             this.Name = "Form1";
@@ -66,6 +88,8 @@ namespace tp_winforms_catalogo
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvArticulos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PbElectro)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCategorias)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMarcas)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -74,6 +98,8 @@ namespace tp_winforms_catalogo
 
         private System.Windows.Forms.DataGridView dgvArticulos;
         private System.Windows.Forms.PictureBox PbElectro;
+        private System.Windows.Forms.DataGridView dgvCategorias;
+        private System.Windows.Forms.DataGridView dgvMarcas;
     }
 }
 
