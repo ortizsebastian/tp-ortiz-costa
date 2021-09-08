@@ -50,18 +50,63 @@
     <Compile Include="Articulo.cs" />
     <Compile Include="Categoria.cs" />
     <Compile Include="CategoriaNegocio.cs" />
-    <Compile Include="Form1.cs">
+    <Compile Include="frmMain.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAgregar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAgregar.Designer.cs">
+      <DependentUpon>frmAgregar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEliminar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEliminar.Designer.cs">
+      <DependentUpon>frmEliminar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmListarTodos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmListarTodos.Designer.cs">
+      <DependentUpon>frmListarTodos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmListarUno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmListarUno.Designer.cs">
+      <DependentUpon>frmListarUno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmModificar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmModificar.Designer.cs">
+      <DependentUpon>frmModificar.cs</DependentUpon>
     </Compile>
     <Compile Include="Marca.cs" />
     <Compile Include="MarcaNegocio.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAgregar.resx">
+      <DependentUpon>frmAgregar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEliminar.resx">
+      <DependentUpon>frmEliminar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmListarTodos.resx">
+      <DependentUpon>frmListarTodos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmListarUno.resx">
+      <DependentUpon>frmListarUno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmModificar.resx">
+      <DependentUpon>frmModificar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
