@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace tp_winforms_catalogo
 {
-    public partial class frmModificar : Form
+    public partial class frmBusqueda : Form
     {
-        public frmModificar()
+        public frmBusqueda()
         {
             InitializeComponent();
         }

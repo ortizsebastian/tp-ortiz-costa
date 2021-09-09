@@ -16,5 +16,12 @@ namespace tp_winforms_catalogo
         {
             InitializeComponent();
         }
+
+        private void btnAtras_Click(object sender, EventArgs e)
+        {
+            frmMain to = new frmMain();
+            to.Show();
+            this.Close();
+        }
     }
 }

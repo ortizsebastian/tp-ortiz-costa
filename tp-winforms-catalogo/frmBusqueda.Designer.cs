@@ -1,7 +1,7 @@
 ﻿
 namespace tp_winforms_catalogo
 {
-    partial class frmModificar
+    partial class frmBusqueda
     {
         /// <summary>
         /// Required designer variable.
@@ -42,15 +42,15 @@ namespace tp_winforms_catalogo
             this.btnAtras.UseVisualStyleBackColor = true;
             this.btnAtras.Click += new System.EventHandler(this.btnAtras_Click);
             // 
-            // frmModificar
+            // frmBusqueda
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btnAtras);
-            this.Name = "frmModificar";
+            this.Name = "frmBusqueda";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Modificar Artículos";
+            this.Text = "frmBusqueda";
             this.ResumeLayout(false);
 
         }
