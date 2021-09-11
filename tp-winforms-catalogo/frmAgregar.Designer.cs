@@ -45,12 +45,13 @@ namespace tp_winforms_catalogo
             this.txtPrecio = new System.Windows.Forms.TextBox();
             this.btnEnviar = new System.Windows.Forms.Button();
             this.btnAtras = new System.Windows.Forms.Button();
+            this.label8 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(237, 44);
+            this.label1.Location = new System.Drawing.Point(237, 71);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(43, 13);
             this.label1.TabIndex = 0;
@@ -59,7 +60,7 @@ namespace tp_winforms_catalogo
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(237, 79);
+            this.label2.Location = new System.Drawing.Point(237, 106);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(47, 13);
             this.label2.TabIndex = 1;
@@ -68,7 +69,7 @@ namespace tp_winforms_catalogo
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(237, 114);
+            this.label3.Location = new System.Drawing.Point(237, 141);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(66, 13);
             this.label3.TabIndex = 2;
@@ -77,25 +78,25 @@ namespace tp_winforms_catalogo
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(237, 149);
+            this.label4.Location = new System.Drawing.Point(237, 176);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(52, 13);
+            this.label4.Size = new System.Drawing.Size(40, 13);
             this.label4.TabIndex = 3;
-            this.label4.Text = "Id Marca:";
+            this.label4.Text = "Marca:";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(237, 184);
+            this.label5.Location = new System.Drawing.Point(237, 211);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(66, 13);
+            this.label5.Size = new System.Drawing.Size(55, 13);
             this.label5.TabIndex = 4;
-            this.label5.Text = "Id categoria:";
+            this.label5.Text = "Categoria:";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(237, 219);
+            this.label6.Location = new System.Drawing.Point(237, 246);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(61, 13);
             this.label6.TabIndex = 5;
@@ -104,7 +105,7 @@ namespace tp_winforms_catalogo
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(237, 254);
+            this.label7.Location = new System.Drawing.Point(237, 281);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(40, 13);
             this.label7.TabIndex = 6;
@@ -112,52 +113,53 @@ namespace tp_winforms_catalogo
             // 
             // txtCodigo
             // 
-            this.txtCodigo.Location = new System.Drawing.Point(309, 41);
+            this.txtCodigo.Location = new System.Drawing.Point(309, 68);
             this.txtCodigo.Name = "txtCodigo";
-            this.txtCodigo.Size = new System.Drawing.Size(226, 20);
+            this.txtCodigo.Size = new System.Drawing.Size(244, 20);
             this.txtCodigo.TabIndex = 7;
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(309, 76);
+            this.txtNombre.Location = new System.Drawing.Point(309, 103);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(226, 20);
+            this.txtNombre.Size = new System.Drawing.Size(244, 20);
             this.txtNombre.TabIndex = 8;
             // 
             // txtDescripcion
             // 
-            this.txtDescripcion.Location = new System.Drawing.Point(309, 111);
+            this.txtDescripcion.Location = new System.Drawing.Point(309, 138);
             this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.Size = new System.Drawing.Size(226, 20);
+            this.txtDescripcion.Size = new System.Drawing.Size(244, 20);
             this.txtDescripcion.TabIndex = 9;
             // 
             // txtIdMarca
             // 
-            this.txtIdMarca.Location = new System.Drawing.Point(309, 146);
+            this.txtIdMarca.Location = new System.Drawing.Point(309, 173);
             this.txtIdMarca.Name = "txtIdMarca";
-            this.txtIdMarca.Size = new System.Drawing.Size(226, 20);
+            this.txtIdMarca.Size = new System.Drawing.Size(244, 20);
             this.txtIdMarca.TabIndex = 10;
             // 
             // txtIdCategoria
             // 
-            this.txtIdCategoria.Location = new System.Drawing.Point(309, 181);
+            this.txtIdCategoria.Location = new System.Drawing.Point(309, 208);
             this.txtIdCategoria.Name = "txtIdCategoria";
-            this.txtIdCategoria.Size = new System.Drawing.Size(226, 20);
+            this.txtIdCategoria.Size = new System.Drawing.Size(244, 20);
             this.txtIdCategoria.TabIndex = 11;
             // 
             // txtUrl
             // 
-            this.txtUrl.Location = new System.Drawing.Point(309, 216);
+            this.txtUrl.Location = new System.Drawing.Point(309, 243);
             this.txtUrl.Name = "txtUrl";
-            this.txtUrl.Size = new System.Drawing.Size(226, 20);
+            this.txtUrl.Size = new System.Drawing.Size(244, 20);
             this.txtUrl.TabIndex = 12;
             // 
             // txtPrecio
             // 
-            this.txtPrecio.Location = new System.Drawing.Point(309, 256);
+            this.txtPrecio.Location = new System.Drawing.Point(309, 278);
             this.txtPrecio.Name = "txtPrecio";
-            this.txtPrecio.Size = new System.Drawing.Size(226, 20);
+            this.txtPrecio.Size = new System.Drawing.Size(244, 20);
             this.txtPrecio.TabIndex = 13;
+            this.txtPrecio.TabStop = false;
             // 
             // btnEnviar
             // 
@@ -179,11 +181,22 @@ namespace tp_winforms_catalogo
             this.btnAtras.UseVisualStyleBackColor = true;
             this.btnAtras.Click += new System.EventHandler(this.btnAtras_Click);
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Tahoma", 21.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(272, 3);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(255, 35);
+            this.label8.TabIndex = 16;
+            this.label8.Text = "Agregar Articulo";
+            // 
             // frmAgregar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.btnAtras);
             this.Controls.Add(this.btnEnviar);
             this.Controls.Add(this.txtPrecio);
@@ -226,5 +239,6 @@ namespace tp_winforms_catalogo
         private System.Windows.Forms.TextBox txtPrecio;
         private System.Windows.Forms.Button btnEnviar;
         private System.Windows.Forms.Button btnAtras;
+        private System.Windows.Forms.Label label8;
     }
 }

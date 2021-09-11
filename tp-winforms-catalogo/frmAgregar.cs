@@ -19,32 +19,31 @@ namespace tp_winforms_catalogo
 
         private void btnEnviar_Click(object sender, EventArgs e)
         {
-            int Precio = Int32.Parse(txtPrecio.Text);
-
-            Articulo Articulo = new Articulo();
-            Articulo.Codigo = txtCodigo.Text;
-            Articulo.Nombre = txtNombre.Text;
-            Articulo.Descripcion = txtDescripcion.Text;
-            Articulo.IdMarca = txtIdMarca.Text;
-            Articulo.IdCategoria = txtIdCategoria.Text;
-            Articulo.ImagenUrl = txtUrl.Text;
-            Articulo.Precio = Precio;
-
-            int resultado = ConexionSqlAgregar.Agregar(Articulo);
-
-            if(resultado > 0)
+            try
             {
-                MessageBox.Show("Datos guardados correctamente", "Datos guardados", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                int Precio = Int32.Parse(txtPrecio.Text);
+
+                Articulo Articulo = new Articulo();
+                Articulo.Codigo = txtCodigo.Text;
+                Articulo.Nombre = txtNombre.Text;
+                Articulo.Descripcion = txtDescripcion.Text;
+                Articulo.IdMarca = txtIdMarca.Text;
+                Articulo.IdCategoria = txtIdCategoria.Text;
+                Articulo.ImagenUrl = txtUrl.Text;
+                Articulo.Precio = Precio;
+
+                int resultado = ConexionSqlAgregar.Agregar(Articulo);
+
+                if (resultado > 0)
+                {
+                    MessageBox.Show("Datos guardados correctamente", "Datos guardados", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    limpiar();
+                }
             }
-            else
+            catch (Exception)
             {
                 MessageBox.Show("No se pudieron guardar los datos", "Error al guardar datos", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
-        }
-
-        private void txtUrl_TextChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void btnAtras_Click(object sender, EventArgs e)
@@ -52,6 +51,17 @@ namespace tp_winforms_catalogo
             frmMain to = new frmMain();
             to.Show();
             this.Close();
+        }
+
+        void limpiar()
+        {
+            txtCodigo.Clear();
+            txtNombre.Clear();
+            txtDescripcion.Clear();
+            txtIdMarca.Clear();
+            txtIdCategoria.Clear();
+            txtUrl.Clear();
+            txtPrecio.Clear();
         }
     }
 }

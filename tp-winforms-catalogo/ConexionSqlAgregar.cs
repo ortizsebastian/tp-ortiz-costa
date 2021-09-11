@@ -22,5 +22,47 @@ namespace tp_winforms_catalogo
             }
             return retorno;
         }
+
+        public static List<Articulo> buscarArticulo(String pCodigo)
+        {
+            List<Articulo> Lista = new List<Articulo>();
+            using(SqlConnection conexion = CreaConexion.ObtenerConexion())
+            {
+                SqlCommand comando = new SqlCommand(string.Format("select distinct Codigo, Nombre, Descripcion, IdMarca, IdCategoria, ImagenUrl, Precio from ARTICULOS " +
+                    "where Codigo like '%{0}%'", pCodigo),conexion);
+                
+                SqlDataReader reader = comando.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    Articulo pArticulo = new Articulo();
+                    pArticulo.Codigo = reader.GetString(0);
+                    pArticulo.Nombre = reader.GetString(1);
+                    pArticulo.Descripcion = reader.GetString(2);
+                    //pArticulo.IdMarca = Convert.ToString(reader.GetString(3));
+                    //pArticulo.IdCategoria = Convert.ToString(reader.GetString(4));
+                    pArticulo.ImagenUrl = reader.GetString(5);
+                    pArticulo.Precio = reader.GetDecimal(6);
+
+                    Lista.Add(pArticulo);
+                }
+                conexion.Close();
+                return Lista;
+            }  
+        }
+
+        public static int modificar(Articulo pArticulo)
+        {
+            int retorno = 0;
+            using(SqlConnection conexion = CreaConexion.ObtenerConexion())
+            {
+                SqlCommand comando = new SqlCommand(string.Format("update ARTICULOS set Codigo='{0}', Nombre='{1}', Descripcion='{2}', IdMarca='{3}', IdCategoria='{4}', " +
+                    "ImagenUrl='{5}', Precio='{6}' where Codigo = '{0}'", pArticulo.Codigo, pArticulo.Nombre, pArticulo.Descripcion, pArticulo.IdMarca, pArticulo.IdCategoria,
+                    pArticulo.ImagenUrl, pArticulo.Precio), conexion);
+
+                retorno = comando.ExecuteNonQuery();
+            }
+            return retorno;
+        }
     }
 }

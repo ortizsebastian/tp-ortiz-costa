@@ -23,5 +23,10 @@ namespace tp_winforms_catalogo
             to.Show();
             this.Close();
         }
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            dgvBuscarUno.DataSource = ConexionSqlAgregar.buscarArticulo(txtBuscarCodigo.Text);
+        }
+
     }
 }

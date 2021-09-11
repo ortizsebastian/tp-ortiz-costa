@@ -20,7 +20,7 @@ namespace tp_winforms_catalogo
             {
                 conexion.ConnectionString = "server=.\\SQLEXPRESS; database=CATALOGO_DB; integrated security=true";
                 comando.CommandType = System.Data.CommandType.Text;
-                comando.CommandText = "Select distinct Codigo, Nombre, Descripcion, ImagenUrl From ARTICULOS order by Nombre asc";
+                comando.CommandText = "Select distinct Codigo, Nombre, Descripcion, ImagenUrl, Precio From ARTICULOS order by Nombre asc";
                 comando.Connection = conexion;
 
                 conexion.Open();
@@ -33,6 +33,7 @@ namespace tp_winforms_catalogo
                     aux.Nombre = (string)lector["Nombre"];
                     aux.Descripcion = (string)lector["Descripcion"];
                     aux.ImagenUrl = (string)lector["ImagenUrl"];
+                    aux.Precio = (decimal)lector["Precio"];
 
                     lista.Add(aux);
                 }

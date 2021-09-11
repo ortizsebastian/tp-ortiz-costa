@@ -62,7 +62,7 @@ namespace tp_winforms_catalogo
             frmListarUno to = new frmListarUno();
             to.Show();
             this.Hide();
-
+            
             //frmListarUno ListarUno = new frmListarUno();
             //ListarUno.ShowDialog();
         }
