@@ -36,6 +36,7 @@ namespace tp_winforms_catalogo
             this.dgvBuscarUno = new System.Windows.Forms.DataGridView();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.pbFoto = new System.Windows.Forms.PictureBox();
+            this.btnSeleccionarMod = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBuscarUno)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbFoto)).BeginInit();
             this.SuspendLayout();
@@ -103,11 +104,22 @@ namespace tp_winforms_catalogo
             this.pbFoto.TabIndex = 6;
             this.pbFoto.TabStop = false;
             // 
+            // btnSeleccionarMod
+            // 
+            this.btnSeleccionarMod.Location = new System.Drawing.Point(118, 462);
+            this.btnSeleccionarMod.Name = "btnSeleccionarMod";
+            this.btnSeleccionarMod.Size = new System.Drawing.Size(100, 30);
+            this.btnSeleccionarMod.TabIndex = 7;
+            this.btnSeleccionarMod.Text = "Modificar";
+            this.btnSeleccionarMod.UseVisualStyleBackColor = true;
+            this.btnSeleccionarMod.Click += new System.EventHandler(this.btnSeleccionarMod_Click);
+            // 
             // frmListarUno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 504);
+            this.Controls.Add(this.btnSeleccionarMod);
             this.Controls.Add(this.pbFoto);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.dgvBuscarUno);
@@ -134,5 +146,6 @@ namespace tp_winforms_catalogo
         private System.Windows.Forms.DataGridView dgvBuscarUno;
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.PictureBox pbFoto;
+        private System.Windows.Forms.Button btnSeleccionarMod;
     }
 }

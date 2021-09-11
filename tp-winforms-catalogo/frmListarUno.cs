@@ -28,5 +28,12 @@ namespace tp_winforms_catalogo
             dgvBuscarUno.DataSource = ConexionSqlAgregar.buscarArticulo(txtBuscarCodigo.Text);
         }
 
+        private void btnSeleccionarMod_Click(object sender, EventArgs e)
+        {
+            if (dgvBuscarUno.SelectedRows.Count == 1)
+            {
+
+            }
+        }
     }
 }

@@ -23,5 +23,15 @@ namespace tp_winforms_catalogo
             to.Show();
             this.Close();
         }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+           /* 
+              if(MessageBox.Show("Esta seguro que desea eliminar el articulo?", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                int resultado = ConexionSqlAgregar.eliminar()
+            }
+           */
+        }
     }
 }

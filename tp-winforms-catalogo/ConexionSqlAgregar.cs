@@ -61,6 +61,19 @@ namespace tp_winforms_catalogo
                     pArticulo.ImagenUrl, pArticulo.Precio), conexion);
 
                 retorno = comando.ExecuteNonQuery();
+                conexion.Close();
+            }
+            return retorno;
+        }
+
+        public static int eliminar (string Codigo)
+        {
+            int retorno = 0;
+            using (SqlConnection conexion = CreaConexion.ObtenerConexion())
+            {
+                SqlCommand comando = new SqlCommand(string.Format("delete from ARTICULOS where Codigo = '{0}'", Codigo), conexion);
+                retorno = comando.ExecuteNonQuery();
+                conexion.Close();
             }
             return retorno;
         }
