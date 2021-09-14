@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace tp_winforms_catalogo
+namespace UI
 {
     static class Program
     {

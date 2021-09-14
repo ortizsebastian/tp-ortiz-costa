@@ -1,7 +1,7 @@
 ﻿
-namespace tp_winforms_catalogo
+namespace UI
 {
-    partial class frmListarUno
+    partial class frmModificar
     {
         /// <summary>
         /// Required designer variable.
@@ -31,13 +31,13 @@ namespace tp_winforms_catalogo
         {
             this.SuspendLayout();
             // 
-            // frmListarUno
+            // frmModificar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Name = "frmListarUno";
-            this.Text = "Ver Artículo";
+            this.Name = "frmModificar";
+            this.Text = "Modificar Artículos";
             this.ResumeLayout(false);
 
         }

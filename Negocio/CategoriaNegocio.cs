@@ -10,35 +10,36 @@ namespace Negocio
 {
     public class CategoriaNegocio
     {
-        public List<Categoria> listar() 
+        public List<Categoria> listar()
         {
-            List<Categoria> lista = new List<Categoria>(); 
-            AccesoAdatos datos = new AccesoAdatos();
+            List<Categoria> Lista = new List<Categoria>();
+            AccesoDatos Datos = new AccesoDatos();
 
             try
             {
-                datos.SetConsulta("Select distinct Id, Descripcion From CATEGORIAS");
-                datos.EjLectura();
+                Datos.SetConsulta("Select distinct Id, Descripcion From CATEGORIAS");
+                Datos.EjecutarLectura();
 
-                while (datos.Lector.Read()) 
+                while (Datos.Lector.Read())
                 {
-                    Categoria aux = new Categoria();
-                    aux.Id = (int)datos.Lector["Id"];
-                    aux.Descripcion = (string)datos.Lector["Descripcion"];
+                    Categoria Auxiliar = new Categoria();
+                    Auxiliar.Id = (int)Datos.Lector["Id"];
+                    Auxiliar.Descripcion = (string)Datos.Lector["Descripcion"];
 
-                    lista.Add(aux); 
+                    Lista.Add(Auxiliar);
                 }
-                
-                return lista;
+
+                return Lista;
             }
-            catch (Exception ex) 
+            catch (Exception ex)
             {
                 throw ex;
             }
             finally
             {
-                datos.cerrarConexion();
+                Datos.CerrarConexion();
             }
         }
     }
 }
+

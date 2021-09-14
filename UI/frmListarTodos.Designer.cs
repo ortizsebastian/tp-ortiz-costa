@@ -1,5 +1,5 @@
 ﻿
-namespace tp_winforms_catalogo
+namespace UI
 {
     partial class frmListarTodos
     {

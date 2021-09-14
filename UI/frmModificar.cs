@@ -8,20 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace tp_winforms_catalogo
+namespace UI
 {
-    public partial class frmBusqueda : Form
+    public partial class frmModificar : Form
     {
-        public frmBusqueda()
+        public frmModificar()
         {
             InitializeComponent();
-        }
-
-        private void btnAtras_Click(object sender, EventArgs e)
-        {
-            frmMain to = new frmMain();
-            to.Show();
-            this.Close();
         }
     }
 }

@@ -1,7 +1,7 @@
 ﻿
-namespace tp_winforms_catalogo
+namespace UI
 {
-    partial class frmBusqueda
+    partial class frmListar
     {
         /// <summary>
         /// Required designer variable.
@@ -29,34 +29,19 @@ namespace tp_winforms_catalogo
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnAtras = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // btnAtras
-            // 
-            this.btnAtras.Location = new System.Drawing.Point(688, 408);
-            this.btnAtras.Name = "btnAtras";
-            this.btnAtras.Size = new System.Drawing.Size(100, 30);
-            this.btnAtras.TabIndex = 0;
-            this.btnAtras.Text = "Atras";
-            this.btnAtras.UseVisualStyleBackColor = true;
-            this.btnAtras.Click += new System.EventHandler(this.btnAtras_Click);
-            // 
-            // frmBusqueda
+            // frmListar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.btnAtras);
-            this.Name = "frmBusqueda";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmBusqueda";
+            this.ClientSize = new System.Drawing.Size(491, 323);
+            this.Name = "frmListar";
+            this.Text = "Ver Artículo";
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btnAtras;
     }
 }

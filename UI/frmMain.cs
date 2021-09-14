@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace tp_winforms_catalogo
+namespace UI
 {
     public partial class frmMain : Form
     {
@@ -43,7 +43,7 @@ namespace tp_winforms_catalogo
 
         private void tsmi5_verArticulo_Click(object sender, EventArgs e)
         {
-            frmListarUno ListarUno = new frmListarUno();
+            frmListar ListarUno = new frmListar();
             ListarUno.ShowDialog();
         }
     }

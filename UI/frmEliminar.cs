@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace tp_winforms_catalogo
+namespace UI
 {
-    public partial class frmModificar : Form
+    public partial class frmEliminar : Form
     {
-        public frmModificar()
+        public frmEliminar()
         {
             InitializeComponent();
         }

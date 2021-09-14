@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace tp_winforms_catalogo
+namespace UI
 {
-    public partial class frmListarUno : Form
+    public partial class frmListar : Form
     {
-        public frmListarUno()
+        public frmListar()
         {
             InitializeComponent();
         }

@@ -10,26 +10,25 @@ namespace Negocio
 {
     public class MarcaNegocio
     {
-        public List<Marca> listar() 
+        public List<Marca> Listar()
         {
-            List<Marca> lista = new List<Marca>();
-            AccesoAdatos datos = new AccesoAdatos();
+            List<Marca> Lista = new List<Marca>();
+            AccesoDatos Datos = new AccesoDatos();
 
             try
             {
-                datos.SetConsulta("Select Id, Descripcion From MARCAS");
-                datos.EjLectura();
+                Datos.SetConsulta("Select Id, Descripcion From MARCAS");
+                Datos.EjecutarLectura();
 
-                while (datos.Lector.Read()) 
+                while (Datos.Lector.Read())
                 {
-                    Marca aux = new Marca(); 
-                    aux.Id = (int)datos.Lector["Id"];
-                    aux.Descripcion = (string)datos.Lector["Descripcion"];
+                    Marca Axuliar = new Marca();
+                    Axuliar.Id = (int)Datos.Lector["Id"];
+                    Axuliar.Descripcion = (string)Datos.Lector["Descripcion"];
 
-                    lista.Add(aux); 
+                    Lista.Add(Axuliar);
                 }
-
-                return lista; 
+                return Lista;
             }
             catch (Exception ex)
             {
@@ -37,8 +36,9 @@ namespace Negocio
             }
             finally
             {
-                datos.cerrarConexion();
+                Datos.CerrarConexion();
             }
         }
     }
 }
+

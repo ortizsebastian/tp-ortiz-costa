@@ -11,7 +11,7 @@ using Negocio;
 using System.Windows.Forms;
 
 
-namespace tp_winforms_catalogo
+namespace UI
 {
     public partial class frmListarTodos : Form
     {
@@ -22,18 +22,18 @@ namespace tp_winforms_catalogo
         }
         private void frmListarTodos_Load(object sender, EventArgs e)
         {
-            ArticuloNegocio negocio = new ArticuloNegocio();
-            ListaArticulos = negocio.listar();
+            ArticuloNegocio Negocio = new ArticuloNegocio();
+            ListaArticulos = Negocio.Listar();
             dgvArticulos.DataSource = ListaArticulos;
             dgvArticulos.Columns["ImagenUrl"].Visible = false;
-            cargarImagen(ListaArticulos[0].ImagenUrl);
+            CargarImagen(ListaArticulos[0].ImagenUrl);
         }
         private void dgvArticulos_SelectionChanged(object sender, EventArgs e)
         {
             Articulo Seleccionado = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
-            cargarImagen(Seleccionado.ImagenUrl);
+            CargarImagen(Seleccionado.ImagenUrl);
         }
-        private void cargarImagen(string imagen)
+        private void CargarImagen(string imagen)
         {
             try
             {

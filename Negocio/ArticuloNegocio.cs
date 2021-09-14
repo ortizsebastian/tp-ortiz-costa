@@ -6,32 +6,32 @@ using System.Threading.Tasks;
 using Dominio;
 using System.Data.SqlClient;
 
+
 namespace Negocio
 {
     public class ArticuloNegocio
     {
-        public List<Articulo> listar()
+        public List<Articulo> Listar()
         {
-            List<Articulo> lista = new List<Articulo>();
-            AccesoAdatos datos = new AccesoAdatos();
-            
+            List<Articulo> Lista = new List<Articulo>();
+            AccesoDatos Datos = new AccesoDatos();
+
             try
             {
-                datos.SetConsulta("Select distinct Codigo, Nombre, Descripcion, ImagenUrl From ARTICULOS order by Nombre asc");
-                datos.EjLectura();
+                Datos.SetConsulta("Select distinct Codigo, Nombre, Descripcion, ImagenUrl From ARTICULOS order by Nombre asc");
+                Datos.EjecutarLectura();
 
-                while (datos.Lector.Read())
+                while (Datos.Lector.Read())
                 {
-                    Articulo aux = new Articulo();
-                    aux.Codigo = (string)datos.Lector["Codigo"];
-                    aux.Nombre = (string)datos.Lector["Nombre"];
-                    aux.Descripcion = (string)datos.Lector["Descripcion"];
-                    aux.ImagenUrl = (string)datos.Lector["ImagenUrl"];
-
-                    lista.Add(aux);
+                    Articulo Auxiliar = new Articulo();
+                    Auxiliar.Codigo = (string)Datos.Lector["Codigo"];
+                    Auxiliar.Nombre = (string)Datos.Lector["Nombre"];
+                    Auxiliar.Descripcion = (string)Datos.Lector["Descripcion"];
+                    Auxiliar.ImagenUrl = (string)Datos.Lector["ImagenUrl"];
+                    Lista.Add(Auxiliar);
                 }
 
-                return lista;
+                return Lista;
             }
             catch (Exception ex)
             {
@@ -39,7 +39,7 @@ namespace Negocio
             }
             finally
             {
-                datos.cerrarConexion();
+                Datos.CerrarConexion();
             }
         }
     }
