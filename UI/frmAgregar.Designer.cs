@@ -38,18 +38,20 @@ namespace UI
             this.label7 = new System.Windows.Forms.Label();
             this.btnAtras = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txtCodigo = new System.Windows.Forms.TextBox();
+            this.txtNombre = new System.Windows.Forms.TextBox();
+            this.txtDescripcion = new System.Windows.Forms.TextBox();
+            this.txtImagen = new System.Windows.Forms.TextBox();
+            this.txtPrecio = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
+            this.cboMarca = new System.Windows.Forms.ComboBox();
+            this.cboCategoria = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(30, 55);
+            this.label1.Location = new System.Drawing.Point(49, 55);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(43, 13);
             this.label1.TabIndex = 0;
@@ -58,7 +60,7 @@ namespace UI
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(30, 90);
+            this.label2.Location = new System.Drawing.Point(49, 90);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(47, 13);
             this.label2.TabIndex = 1;
@@ -67,7 +69,7 @@ namespace UI
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(30, 125);
+            this.label3.Location = new System.Drawing.Point(49, 125);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(66, 13);
             this.label3.TabIndex = 2;
@@ -76,7 +78,7 @@ namespace UI
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(30, 160);
+            this.label4.Location = new System.Drawing.Point(49, 160);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(35, 13);
             this.label4.TabIndex = 3;
@@ -85,7 +87,7 @@ namespace UI
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(30, 160);
+            this.label5.Location = new System.Drawing.Point(49, 160);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(40, 13);
             this.label5.TabIndex = 4;
@@ -94,7 +96,7 @@ namespace UI
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(30, 195);
+            this.label6.Location = new System.Drawing.Point(49, 195);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(55, 13);
             this.label6.TabIndex = 5;
@@ -103,7 +105,7 @@ namespace UI
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(30, 230);
+            this.label7.Location = new System.Drawing.Point(49, 230);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(45, 13);
             this.label7.TabIndex = 6;
@@ -126,62 +128,83 @@ namespace UI
             this.btnAgregar.TabIndex = 8;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
-            // textBox1
+            // txtCodigo
             // 
-            this.textBox1.Location = new System.Drawing.Point(102, 52);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(268, 20);
-            this.textBox1.TabIndex = 9;
+            this.txtCodigo.Location = new System.Drawing.Point(121, 52);
+            this.txtCodigo.Name = "txtCodigo";
+            this.txtCodigo.Size = new System.Drawing.Size(268, 20);
+            this.txtCodigo.TabIndex = 9;
             // 
-            // textBox2
+            // txtNombre
             // 
-            this.textBox2.Location = new System.Drawing.Point(102, 87);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(268, 20);
-            this.textBox2.TabIndex = 10;
+            this.txtNombre.Location = new System.Drawing.Point(121, 87);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(268, 20);
+            this.txtNombre.TabIndex = 10;
             // 
-            // textBox3
+            // txtDescripcion
             // 
-            this.textBox3.Location = new System.Drawing.Point(102, 122);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(268, 20);
-            this.textBox3.TabIndex = 11;
+            this.txtDescripcion.Location = new System.Drawing.Point(121, 122);
+            this.txtDescripcion.Name = "txtDescripcion";
+            this.txtDescripcion.Size = new System.Drawing.Size(268, 20);
+            this.txtDescripcion.TabIndex = 11;
             // 
-            // textBox4
+            // txtImagen
             // 
-            this.textBox4.Location = new System.Drawing.Point(102, 227);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(268, 20);
-            this.textBox4.TabIndex = 12;
+            this.txtImagen.Location = new System.Drawing.Point(121, 227);
+            this.txtImagen.Name = "txtImagen";
+            this.txtImagen.Size = new System.Drawing.Size(268, 20);
+            this.txtImagen.TabIndex = 12;
             // 
-            // textBox5
+            // txtPrecio
             // 
-            this.textBox5.Location = new System.Drawing.Point(102, 262);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(268, 20);
-            this.textBox5.TabIndex = 13;
+            this.txtPrecio.Location = new System.Drawing.Point(121, 262);
+            this.txtPrecio.Name = "txtPrecio";
+            this.txtPrecio.Size = new System.Drawing.Size(268, 20);
+            this.txtPrecio.TabIndex = 13;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(30, 265);
+            this.label8.Location = new System.Drawing.Point(49, 265);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(40, 13);
             this.label8.TabIndex = 14;
             this.label8.Text = "Precio:";
+            // 
+            // cboMarca
+            // 
+            this.cboMarca.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboMarca.FormattingEnabled = true;
+            this.cboMarca.Location = new System.Drawing.Point(121, 157);
+            this.cboMarca.Name = "cboMarca";
+            this.cboMarca.Size = new System.Drawing.Size(268, 21);
+            this.cboMarca.TabIndex = 15;
+            // 
+            // cboCategoria
+            // 
+            this.cboCategoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboCategoria.FormattingEnabled = true;
+            this.cboCategoria.Location = new System.Drawing.Point(121, 192);
+            this.cboCategoria.Name = "cboCategoria";
+            this.cboCategoria.Size = new System.Drawing.Size(268, 21);
+            this.cboCategoria.TabIndex = 16;
             // 
             // frmAgregar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(454, 522);
+            this.Controls.Add(this.cboCategoria);
+            this.Controls.Add(this.cboMarca);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtPrecio);
+            this.Controls.Add(this.txtImagen);
+            this.Controls.Add(this.txtDescripcion);
+            this.Controls.Add(this.txtNombre);
+            this.Controls.Add(this.txtCodigo);
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.btnAtras);
             this.Controls.Add(this.label7);
@@ -192,7 +215,9 @@ namespace UI
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "frmAgregar";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Agregar Artículos";
+            this.Load += new System.EventHandler(this.frmAgregar_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -209,11 +234,13 @@ namespace UI
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button btnAtras;
         private System.Windows.Forms.Button btnAgregar;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox txtCodigo;
+        private System.Windows.Forms.TextBox txtNombre;
+        private System.Windows.Forms.TextBox txtDescripcion;
+        private System.Windows.Forms.TextBox txtImagen;
+        private System.Windows.Forms.TextBox txtPrecio;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.ComboBox cboMarca;
+        private System.Windows.Forms.ComboBox cboCategoria;
     }
 }

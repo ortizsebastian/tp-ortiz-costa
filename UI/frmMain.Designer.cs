@@ -46,35 +46,35 @@ namespace UI
             this.tsmi_verArticulo});
             this.menuArticulos.Location = new System.Drawing.Point(0, 0);
             this.menuArticulos.Name = "menuArticulos";
-            this.menuArticulos.Size = new System.Drawing.Size(524, 27);
+            this.menuArticulos.Size = new System.Drawing.Size(524, 24);
             this.menuArticulos.TabIndex = 4;
             this.menuArticulos.Text = "menuStrip1";
             // 
             // tsmi_listarArticulos
             // 
             this.tsmi_listarArticulos.Name = "tsmi_listarArticulos";
-            this.tsmi_listarArticulos.Size = new System.Drawing.Size(111, 23);
+            this.tsmi_listarArticulos.Size = new System.Drawing.Size(97, 20);
             this.tsmi_listarArticulos.Text = "Listar Artículos";
             this.tsmi_listarArticulos.Click += new System.EventHandler(this.tsmi_listarArticulos_Click);
             // 
             // tsmi_agregarArticulos
             // 
             this.tsmi_agregarArticulos.Name = "tsmi_agregarArticulos";
-            this.tsmi_agregarArticulos.Size = new System.Drawing.Size(70, 23);
+            this.tsmi_agregarArticulos.Size = new System.Drawing.Size(61, 20);
             this.tsmi_agregarArticulos.Text = "Agregar";
             this.tsmi_agregarArticulos.Click += new System.EventHandler(this.tsmi_agregarArticulos_Click);
             // 
             // tsmi_eliminarArticulos
             // 
             this.tsmi_eliminarArticulos.Name = "tsmi_eliminarArticulos";
-            this.tsmi_eliminarArticulos.Size = new System.Drawing.Size(69, 23);
+            this.tsmi_eliminarArticulos.Size = new System.Drawing.Size(62, 20);
             this.tsmi_eliminarArticulos.Text = "Eliminar";
             this.tsmi_eliminarArticulos.Click += new System.EventHandler(this.tsmi_eliminarArticulos_Click);
             // 
             // tsmi_verArticulo
             // 
             this.tsmi_verArticulo.Name = "tsmi_verArticulo";
-            this.tsmi_verArticulo.Size = new System.Drawing.Size(92, 23);
+            this.tsmi_verArticulo.Size = new System.Drawing.Size(80, 20);
             this.tsmi_verArticulo.Text = "Ver Artículo";
             this.tsmi_verArticulo.Click += new System.EventHandler(this.tsmi_verArticulo_Click);
             // 
@@ -86,11 +86,13 @@ namespace UI
             this.Controls.Add(this.menuArticulos);
             this.MainMenuStrip = this.menuArticulos;
             this.Name = "frmMain";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Gestión de Artículos";
             this.menuArticulos.ResumeLayout(false);
             this.menuArticulos.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
+
         }
         #endregion
         private System.Windows.Forms.MenuStrip menuArticulos;

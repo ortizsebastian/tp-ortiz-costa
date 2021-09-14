@@ -35,6 +35,21 @@ namespace Negocio
                 throw ex;
             }
         }
+        public void EjecutarAccion()
+        {
+            Comando.Connection = Conexion;
+
+            try
+            {
+                Conexion.Open();
+                Comando.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+        }
         public void CerrarConexion()
         {
             if (Lector != null) Lector.Close();

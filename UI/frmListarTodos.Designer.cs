@@ -61,6 +61,7 @@ namespace UI
             this.Controls.Add(this.pbxArticulos);
             this.Controls.Add(this.dgvArticulos);
             this.Name = "frmListarTodos";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Listar Artículos";
             this.Load += new System.EventHandler(this.frmListarTodos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvArticulos)).EndInit();

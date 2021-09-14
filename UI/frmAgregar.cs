@@ -6,6 +6,8 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Dominio;
+using Negocio;
 using System.Windows.Forms;
 
 namespace UI
@@ -15,6 +17,49 @@ namespace UI
         public frmAgregar()
         {
             InitializeComponent();
+        }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            Articulo nuevo = new Articulo();
+            ArticuloNegocio negocio = new ArticuloNegocio();
+
+            try
+            {
+                nuevo.Codigo =  txtCodigo.Text;
+                nuevo.Nombre = txtNombre.Text;
+                nuevo.Descripcion = txtDescripcion.Text;
+                nuevo.ImagenUrl = txtImagen.Text;
+                nuevo.Precio = int.Parse(txtPrecio.Text);
+                nuevo.Marca = (Marca)cboMarca.SelectedItem;
+                nuevo.Categoria = (Categoria)cboCategoria.SelectedItem;
+
+                negocio.agregar(nuevo);
+                MessageBox.Show("Agregado exitosamente");
+                Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
+
+        private void frmAgregar_Load(object sender, EventArgs e)
+        {
+            CategoriaNegocio catNegocio = new CategoriaNegocio();
+            MarcaNegocio marNegocio = new MarcaNegocio();
+
+            try
+            {
+                cboCategoria.DataSource = catNegocio.listar();
+                cboMarca.DataSource = marNegocio.Listar();
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.ToString());
+            }
         }
     }
 }
