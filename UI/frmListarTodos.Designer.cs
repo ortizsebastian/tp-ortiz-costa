@@ -40,13 +40,13 @@ namespace UI
             this.dgvArticulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvArticulos.Location = new System.Drawing.Point(12, 12);
             this.dgvArticulos.Name = "dgvArticulos";
-            this.dgvArticulos.Size = new System.Drawing.Size(494, 266);
+            this.dgvArticulos.Size = new System.Drawing.Size(544, 265);
             this.dgvArticulos.TabIndex = 0;
             this.dgvArticulos.SelectionChanged += new System.EventHandler(this.dgvArticulos_SelectionChanged);
             // 
             // pbxArticulos
             // 
-            this.pbxArticulos.Location = new System.Drawing.Point(513, 13);
+            this.pbxArticulos.Location = new System.Drawing.Point(562, 12);
             this.pbxArticulos.Name = "pbxArticulos";
             this.pbxArticulos.Size = new System.Drawing.Size(275, 265);
             this.pbxArticulos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -57,7 +57,7 @@ namespace UI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(849, 289);
             this.Controls.Add(this.pbxArticulos);
             this.Controls.Add(this.dgvArticulos);
             this.Name = "frmListarTodos";

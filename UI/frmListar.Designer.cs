@@ -35,7 +35,7 @@ namespace UI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(491, 323);
+            this.ClientSize = new System.Drawing.Size(849, 289);
             this.Name = "frmListar";
             this.Text = "Ver Artículo";
             this.ResumeLayout(false);

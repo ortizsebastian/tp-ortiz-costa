@@ -18,16 +18,20 @@ namespace Negocio
 
             try
             {
-                Datos.SetConsulta("Select distinct Codigo, Nombre, Descripcion, ImagenUrl From ARTICULOS order by Nombre asc");
+                Datos.SetConsulta("Select Codigo as Código, Nombre,  ImagenUrl, A.Descripcion as Descripción, C.Descripcion as Categoría, M.Descripcion as Marca From ARTICULOS A, MARCAS M, CATEGORIAS C Where A.IdCategoria = C.Id and A.IdMarca = M.Id order by Nombre asc");
                 Datos.EjecutarLectura();
 
                 while (Datos.Lector.Read())
                 {
                     Articulo Auxiliar = new Articulo();
-                    Auxiliar.Codigo = (string)Datos.Lector["Codigo"];
+                    Auxiliar.Codigo = (string)Datos.Lector["Código"];
                     Auxiliar.Nombre = (string)Datos.Lector["Nombre"];
-                    Auxiliar.Descripcion = (string)Datos.Lector["Descripcion"];
                     Auxiliar.ImagenUrl = (string)Datos.Lector["ImagenUrl"];
+                    Auxiliar.Descripcion = (string)Datos.Lector["Descripción"];
+                    Auxiliar.Categoria = new Categoria();
+                    Auxiliar.Categoria.Descripcion = (string)Datos.Lector["Categoría"];
+                    Auxiliar.Marca = new Marca();
+                    Auxiliar.Marca.Descripcion = (string)Datos.Lector["Marca"];
                     Lista.Add(Auxiliar);
                 }
 
