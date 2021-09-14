@@ -16,24 +16,5 @@ namespace tp_winforms_catalogo
         {
             InitializeComponent();
         }
-
-        private void btnAtras_Click(object sender, EventArgs e)
-        {
-            frmMain to = new frmMain();
-            to.Show();
-            this.Close();
-        }
-        private void btnBuscar_Click(object sender, EventArgs e)
-        {
-            dgvBuscarUno.DataSource = ConexionSqlAgregar.buscarArticulo(txtBuscarCodigo.Text);
-        }
-
-        private void btnSeleccionarMod_Click(object sender, EventArgs e)
-        {
-            if (dgvBuscarUno.SelectedRows.Count == 1)
-            {
-
-            }
-        }
     }
 }

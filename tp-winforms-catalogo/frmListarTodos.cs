@@ -6,7 +6,10 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Dominio;
+using Negocio;
 using System.Windows.Forms;
+
 
 namespace tp_winforms_catalogo
 {
@@ -23,8 +26,6 @@ namespace tp_winforms_catalogo
             ListaArticulos = negocio.listar();
             dgvArticulos.DataSource = ListaArticulos;
             dgvArticulos.Columns["ImagenUrl"].Visible = false;
-            dgvArticulos.Columns["IdMarca"].Visible = false;
-            dgvArticulos.Columns["IdCategoria"].Visible = false;
             cargarImagen(ListaArticulos[0].ImagenUrl);
         }
         private void dgvArticulos_SelectionChanged(object sender, EventArgs e)
@@ -42,13 +43,6 @@ namespace tp_winforms_catalogo
             {
                 pbxArticulos.Load("https://www.salonlfc.com/wp-content/uploads/2018/01/image-not-found-scaled-1150x647.png");
             }
-        }
-
-        private void btnAtras_Click(object sender, EventArgs e)
-        {
-            frmMain to = new frmMain();
-            to.Show();
-            this.Close();
         }
     }
 }
