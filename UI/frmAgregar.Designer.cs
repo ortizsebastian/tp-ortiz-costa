@@ -46,6 +46,9 @@ namespace UI
             this.label8 = new System.Windows.Forms.Label();
             this.cboMarca = new System.Windows.Forms.ComboBox();
             this.cboCategoria = new System.Windows.Forms.ComboBox();
+            this.pbxVistaPrecia = new System.Windows.Forms.PictureBox();
+            this.label9 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxVistaPrecia)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -113,19 +116,20 @@ namespace UI
             // 
             // btnAtras
             // 
-            this.btnAtras.Location = new System.Drawing.Point(12, 480);
+            this.btnAtras.Location = new System.Drawing.Point(12, 357);
             this.btnAtras.Name = "btnAtras";
             this.btnAtras.Size = new System.Drawing.Size(100, 30);
-            this.btnAtras.TabIndex = 7;
+            this.btnAtras.TabIndex = 8;
             this.btnAtras.Text = "Atras";
             this.btnAtras.UseVisualStyleBackColor = true;
+            this.btnAtras.Click += new System.EventHandler(this.btnAtras_Click);
             // 
             // btnAgregar
             // 
-            this.btnAgregar.Location = new System.Drawing.Point(342, 480);
+            this.btnAgregar.Location = new System.Drawing.Point(569, 357);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(100, 30);
-            this.btnAgregar.TabIndex = 8;
+            this.btnAgregar.TabIndex = 7;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
@@ -135,35 +139,36 @@ namespace UI
             this.txtCodigo.Location = new System.Drawing.Point(121, 52);
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(268, 20);
-            this.txtCodigo.TabIndex = 9;
+            this.txtCodigo.TabIndex = 0;
             // 
             // txtNombre
             // 
             this.txtNombre.Location = new System.Drawing.Point(121, 87);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(268, 20);
-            this.txtNombre.TabIndex = 10;
+            this.txtNombre.TabIndex = 1;
             // 
             // txtDescripcion
             // 
             this.txtDescripcion.Location = new System.Drawing.Point(121, 122);
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(268, 20);
-            this.txtDescripcion.TabIndex = 11;
+            this.txtDescripcion.TabIndex = 2;
             // 
             // txtImagen
             // 
             this.txtImagen.Location = new System.Drawing.Point(121, 227);
             this.txtImagen.Name = "txtImagen";
             this.txtImagen.Size = new System.Drawing.Size(268, 20);
-            this.txtImagen.TabIndex = 12;
+            this.txtImagen.TabIndex = 5;
+            this.txtImagen.Leave += new System.EventHandler(this.txtImagen_Leave);
             // 
             // txtPrecio
             // 
             this.txtPrecio.Location = new System.Drawing.Point(121, 262);
             this.txtPrecio.Name = "txtPrecio";
             this.txtPrecio.Size = new System.Drawing.Size(268, 20);
-            this.txtPrecio.TabIndex = 13;
+            this.txtPrecio.TabIndex = 6;
             // 
             // label8
             // 
@@ -181,7 +186,7 @@ namespace UI
             this.cboMarca.Location = new System.Drawing.Point(121, 157);
             this.cboMarca.Name = "cboMarca";
             this.cboMarca.Size = new System.Drawing.Size(268, 21);
-            this.cboMarca.TabIndex = 15;
+            this.cboMarca.TabIndex = 3;
             // 
             // cboCategoria
             // 
@@ -190,13 +195,33 @@ namespace UI
             this.cboCategoria.Location = new System.Drawing.Point(121, 192);
             this.cboCategoria.Name = "cboCategoria";
             this.cboCategoria.Size = new System.Drawing.Size(268, 21);
-            this.cboCategoria.TabIndex = 16;
+            this.cboCategoria.TabIndex = 4;
+            // 
+            // pbxVistaPrecia
+            // 
+            this.pbxVistaPrecia.Location = new System.Drawing.Point(419, 71);
+            this.pbxVistaPrecia.Name = "pbxVistaPrecia";
+            this.pbxVistaPrecia.Size = new System.Drawing.Size(235, 211);
+            this.pbxVistaPrecia.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbxVistaPrecia.TabIndex = 17;
+            this.pbxVistaPrecia.TabStop = false;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(422, 55);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(128, 13);
+            this.label9.TabIndex = 18;
+            this.label9.Text = "Vista previa de la imagen:";
             // 
             // frmAgregar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(454, 522);
+            this.ClientSize = new System.Drawing.Size(681, 399);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.pbxVistaPrecia);
             this.Controls.Add(this.cboCategoria);
             this.Controls.Add(this.cboMarca);
             this.Controls.Add(this.label8);
@@ -218,6 +243,7 @@ namespace UI
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Agregar Artículos";
             this.Load += new System.EventHandler(this.frmAgregar_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pbxVistaPrecia)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -242,5 +268,7 @@ namespace UI
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.ComboBox cboMarca;
         private System.Windows.Forms.ComboBox cboCategoria;
+        private System.Windows.Forms.PictureBox pbxVistaPrecia;
+        private System.Windows.Forms.Label label9;
     }
 }

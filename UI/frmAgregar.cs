@@ -26,7 +26,7 @@ namespace UI
 
             try
             {
-                nuevo.Codigo =  txtCodigo.Text;
+                nuevo.Codigo = txtCodigo.Text;
                 nuevo.Nombre = txtNombre.Text;
                 nuevo.Descripcion = txtDescripcion.Text;
                 nuevo.ImagenUrl = txtImagen.Text;
@@ -37,6 +37,7 @@ namespace UI
                 negocio.agregar(nuevo);
                 MessageBox.Show("Agregado exitosamente");
                 Close();
+
             }
             catch (Exception ex)
             {
@@ -60,6 +61,28 @@ namespace UI
 
                 MessageBox.Show(ex.ToString());
             }
+        }
+
+        private void txtImagen_Leave(object sender, EventArgs e)
+        {
+            CargarImagen(txtImagen.Text);
+        }
+
+        private void CargarImagen(string imagen)
+        {
+            try
+            {
+                pbxVistaPrecia.Load(imagen);
+            }
+            catch (Exception)
+            {
+                pbxVistaPrecia.Load("https://www.salonlfc.com/wp-content/uploads/2018/01/image-not-found-scaled-1150x647.png");
+            }
+        }
+
+        private void btnAtras_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

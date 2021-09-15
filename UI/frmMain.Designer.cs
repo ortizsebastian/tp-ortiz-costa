@@ -34,7 +34,11 @@ namespace UI
             this.tsmi_agregarArticulos = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmi_eliminarArticulos = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmi_verArticulo = new System.Windows.Forms.ToolStripMenuItem();
+            this.dgvArticulos = new System.Windows.Forms.DataGridView();
+            this.pbxArticulos = new System.Windows.Forms.PictureBox();
             this.menuArticulos.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvArticulos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxArticulos)).BeginInit();
             this.SuspendLayout();
             // 
             // menuArticulos
@@ -46,22 +50,20 @@ namespace UI
             this.tsmi_verArticulo});
             this.menuArticulos.Location = new System.Drawing.Point(0, 0);
             this.menuArticulos.Name = "menuArticulos";
-            this.menuArticulos.Size = new System.Drawing.Size(524, 24);
+            this.menuArticulos.Size = new System.Drawing.Size(859, 24);
             this.menuArticulos.TabIndex = 4;
             this.menuArticulos.Text = "menuStrip1";
             // 
             // tsmi_listarArticulos
             // 
             this.tsmi_listarArticulos.Name = "tsmi_listarArticulos";
-            this.tsmi_listarArticulos.Size = new System.Drawing.Size(97, 20);
-            this.tsmi_listarArticulos.Text = "Listar Artículos";
-            this.tsmi_listarArticulos.Click += new System.EventHandler(this.tsmi_listarArticulos_Click);
+            this.tsmi_listarArticulos.Size = new System.Drawing.Size(12, 20);
             // 
             // tsmi_agregarArticulos
             // 
             this.tsmi_agregarArticulos.Name = "tsmi_agregarArticulos";
-            this.tsmi_agregarArticulos.Size = new System.Drawing.Size(61, 20);
-            this.tsmi_agregarArticulos.Text = "Agregar";
+            this.tsmi_agregarArticulos.Size = new System.Drawing.Size(117, 20);
+            this.tsmi_agregarArticulos.Text = "Agregar/Modificar";
             this.tsmi_agregarArticulos.Click += new System.EventHandler(this.tsmi_agregarArticulos_Click);
             // 
             // tsmi_eliminarArticulos
@@ -78,18 +80,44 @@ namespace UI
             this.tsmi_verArticulo.Text = "Ver Artículo";
             this.tsmi_verArticulo.Click += new System.EventHandler(this.tsmi_verArticulo_Click);
             // 
+            // dgvArticulos
+            // 
+            this.dgvArticulos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvArticulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvArticulos.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
+            this.dgvArticulos.Location = new System.Drawing.Point(12, 41);
+            this.dgvArticulos.MultiSelect = false;
+            this.dgvArticulos.Name = "dgvArticulos";
+            this.dgvArticulos.Size = new System.Drawing.Size(557, 238);
+            this.dgvArticulos.TabIndex = 5;
+            this.dgvArticulos.SelectionChanged += new System.EventHandler(this.dgvArticulos_SelectionChanged);
+            // 
+            // pbxArticulos
+            // 
+            this.pbxArticulos.Location = new System.Drawing.Point(588, 41);
+            this.pbxArticulos.Name = "pbxArticulos";
+            this.pbxArticulos.Size = new System.Drawing.Size(251, 238);
+            this.pbxArticulos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbxArticulos.TabIndex = 6;
+            this.pbxArticulos.TabStop = false;
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(524, 285);
+            this.ClientSize = new System.Drawing.Size(859, 341);
+            this.Controls.Add(this.pbxArticulos);
+            this.Controls.Add(this.dgvArticulos);
             this.Controls.Add(this.menuArticulos);
             this.MainMenuStrip = this.menuArticulos;
             this.Name = "frmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Gestión de Artículos";
+            this.Text = "w";
+            this.Load += new System.EventHandler(this.frmMain_Load);
             this.menuArticulos.ResumeLayout(false);
             this.menuArticulos.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvArticulos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxArticulos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -100,6 +128,8 @@ namespace UI
         private System.Windows.Forms.ToolStripMenuItem tsmi_agregarArticulos;
         private System.Windows.Forms.ToolStripMenuItem tsmi_eliminarArticulos;
         private System.Windows.Forms.ToolStripMenuItem tsmi_verArticulo;
+        private System.Windows.Forms.DataGridView dgvArticulos;
+        private System.Windows.Forms.PictureBox pbxArticulos;
     }
 }
 
