@@ -37,7 +37,10 @@ namespace UI
         }
         private void tsmi_modificarArticulo_Click(object sender, EventArgs e)
         {
-            frmAgregarModificar modificarArticulo = new frmAgregarModificar();
+            Articulo seleccionado;
+            seleccionado = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
+
+            frmAgregarModificar modificarArticulo = new frmAgregarModificar(seleccionado);
             modificarArticulo.Text = "Modificar Artículo";
             modificarArticulo.ShowDialog();
             cargarAuto();

@@ -50,6 +50,10 @@ namespace Negocio
                 throw ex;
             }
         }
+        public void setearParametro(string nombre, object valor)
+        {
+            Comando.Parameters.AddWithValue("nombre", valor);
+        }
         public void cerrarConexion()
         {
             if (Lector != null) Lector.Close();
