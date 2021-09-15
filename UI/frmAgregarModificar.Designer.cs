@@ -1,7 +1,7 @@
 ﻿
 namespace UI
 {
-    partial class frmAgregar
+    partial class frmAgregarModificar
     {
         /// <summary>
         /// Required designer variable.

@@ -12,9 +12,9 @@ using System.Windows.Forms;
 
 namespace UI
 {
-    public partial class frmAgregar : Form
+    public partial class frmAgregarModificar : Form
     {
-        public frmAgregar()
+        public frmAgregarModificar()
         {
             InitializeComponent();
         }

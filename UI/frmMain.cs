@@ -14,13 +14,14 @@ namespace UI
 {
     public partial class frmMain : Form
     {
+        private List<Articulo> ListaArticulos;
         public frmMain()
         {
             InitializeComponent();
         }
         private void tsmi_agregarArticulos_Click(object sender, EventArgs e)
         {
-            frmAgregar agregarArticulo = new frmAgregar();
+            frmAgregarModificar agregarArticulo = new frmAgregarModificar();
             agregarArticulo.ShowDialog();
             cargarAuto();
         }
@@ -34,8 +35,13 @@ namespace UI
             frmListar listar = new frmListar();
             listar.ShowDialog();
         }
-
-        private List<Articulo> ListaArticulos;
+        private void tsmi_modificarArticulo_Click(object sender, EventArgs e)
+        {
+            frmAgregarModificar modificarArticulo = new frmAgregarModificar();
+            modificarArticulo.Text = "Modificar Artículo";
+            modificarArticulo.ShowDialog();
+            cargarAuto();
+        }
         private void frmMain_Load(object sender, EventArgs e)
         {
             cargarAuto();
@@ -63,7 +69,6 @@ namespace UI
                 MessageBox.Show(ex.ToString());
             }
         }
-
         private void cargarImagen(string imagen)
         {
             try

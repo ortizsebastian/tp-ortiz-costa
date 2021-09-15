@@ -34,6 +34,7 @@ namespace UI
             this.tsmi_agregarArticulos = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmi_eliminarArticulos = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmi_verArticulo = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmi_modificarArticulo = new System.Windows.Forms.ToolStripMenuItem();
             this.dgvArticulos = new System.Windows.Forms.DataGridView();
             this.pbxArticulos = new System.Windows.Forms.PictureBox();
             this.menuArticulos.SuspendLayout();
@@ -47,38 +48,46 @@ namespace UI
             this.tsmi_listarArticulos,
             this.tsmi_agregarArticulos,
             this.tsmi_eliminarArticulos,
-            this.tsmi_verArticulo});
+            this.tsmi_verArticulo,
+            this.tsmi_modificarArticulo});
             this.menuArticulos.Location = new System.Drawing.Point(0, 0);
             this.menuArticulos.Name = "menuArticulos";
-            this.menuArticulos.Size = new System.Drawing.Size(859, 24);
+            this.menuArticulos.Size = new System.Drawing.Size(859, 27);
             this.menuArticulos.TabIndex = 4;
             this.menuArticulos.Text = "menuStrip1";
             // 
             // tsmi_listarArticulos
             // 
             this.tsmi_listarArticulos.Name = "tsmi_listarArticulos";
-            this.tsmi_listarArticulos.Size = new System.Drawing.Size(12, 20);
+            this.tsmi_listarArticulos.Size = new System.Drawing.Size(12, 23);
             // 
             // tsmi_agregarArticulos
             // 
             this.tsmi_agregarArticulos.Name = "tsmi_agregarArticulos";
-            this.tsmi_agregarArticulos.Size = new System.Drawing.Size(117, 20);
-            this.tsmi_agregarArticulos.Text = "Agregar/Modificar";
+            this.tsmi_agregarArticulos.Size = new System.Drawing.Size(70, 23);
+            this.tsmi_agregarArticulos.Text = "Agregar";
             this.tsmi_agregarArticulos.Click += new System.EventHandler(this.tsmi_agregarArticulos_Click);
             // 
             // tsmi_eliminarArticulos
             // 
             this.tsmi_eliminarArticulos.Name = "tsmi_eliminarArticulos";
-            this.tsmi_eliminarArticulos.Size = new System.Drawing.Size(62, 20);
+            this.tsmi_eliminarArticulos.Size = new System.Drawing.Size(69, 23);
             this.tsmi_eliminarArticulos.Text = "Eliminar";
             this.tsmi_eliminarArticulos.Click += new System.EventHandler(this.tsmi_eliminarArticulos_Click);
             // 
             // tsmi_verArticulo
             // 
             this.tsmi_verArticulo.Name = "tsmi_verArticulo";
-            this.tsmi_verArticulo.Size = new System.Drawing.Size(80, 20);
+            this.tsmi_verArticulo.Size = new System.Drawing.Size(92, 23);
             this.tsmi_verArticulo.Text = "Ver Artículo";
             this.tsmi_verArticulo.Click += new System.EventHandler(this.tsmi_verArticulo_Click);
+            // 
+            // tsmi_modificarArticulo
+            // 
+            this.tsmi_modificarArticulo.Name = "tsmi_modificarArticulo";
+            this.tsmi_modificarArticulo.Size = new System.Drawing.Size(78, 23);
+            this.tsmi_modificarArticulo.Text = "Modificar";
+            this.tsmi_modificarArticulo.Click += new System.EventHandler(this.tsmi_modificarArticulo_Click);
             // 
             // dgvArticulos
             // 
@@ -88,6 +97,7 @@ namespace UI
             this.dgvArticulos.Location = new System.Drawing.Point(12, 41);
             this.dgvArticulos.MultiSelect = false;
             this.dgvArticulos.Name = "dgvArticulos";
+            this.dgvArticulos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvArticulos.Size = new System.Drawing.Size(557, 238);
             this.dgvArticulos.TabIndex = 5;
             this.dgvArticulos.SelectionChanged += new System.EventHandler(this.dgvArticulos_SelectionChanged);
@@ -105,14 +115,14 @@ namespace UI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(859, 341);
+            this.ClientSize = new System.Drawing.Size(859, 313);
             this.Controls.Add(this.pbxArticulos);
             this.Controls.Add(this.dgvArticulos);
             this.Controls.Add(this.menuArticulos);
             this.MainMenuStrip = this.menuArticulos;
             this.Name = "frmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "w";
+            this.Text = "Gestión de Artículos";
             this.Load += new System.EventHandler(this.frmMain_Load);
             this.menuArticulos.ResumeLayout(false);
             this.menuArticulos.PerformLayout();
@@ -130,6 +140,7 @@ namespace UI
         private System.Windows.Forms.ToolStripMenuItem tsmi_verArticulo;
         private System.Windows.Forms.DataGridView dgvArticulos;
         private System.Windows.Forms.PictureBox pbxArticulos;
+        private System.Windows.Forms.ToolStripMenuItem tsmi_modificarArticulo;
     }
 }
 
