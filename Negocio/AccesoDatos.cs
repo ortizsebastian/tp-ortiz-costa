@@ -17,12 +17,12 @@ namespace Negocio
             Conexion = new SqlConnection("server=.\\SQLEXPRESS; database=CATALOGO_DB; integrated security=true");
             Comando = new SqlCommand();
         }
-        public void SetConsulta(string Consulta)
+        public void setConsulta(string consulta)
         {
             Comando.CommandType = System.Data.CommandType.Text;
-            Comando.CommandText = Consulta;
+            Comando.CommandText = consulta;
         }
-        public void EjecutarLectura()
+        public void ejecutarLectura()
         {
             Comando.Connection = Conexion;
             try
@@ -35,7 +35,7 @@ namespace Negocio
                 throw ex;
             }
         }
-        public void EjecutarAccion()
+        public void ejecutarAccion()
         {
             Comando.Connection = Conexion;
 
@@ -50,7 +50,7 @@ namespace Negocio
                 throw ex;
             }
         }
-        public void CerrarConexion()
+        public void cerrarConexion()
         {
             if (Lector != null) Lector.Close();
             Conexion.Close();

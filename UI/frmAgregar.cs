@@ -53,7 +53,7 @@ namespace UI
             try
             {
                 cboCategoria.DataSource = catNegocio.listar();
-                cboMarca.DataSource = marNegocio.Listar();
+                cboMarca.DataSource = marNegocio.listar();
 
             }
             catch (Exception ex)
@@ -65,10 +65,10 @@ namespace UI
 
         private void txtImagen_Leave(object sender, EventArgs e)
         {
-            CargarImagen(txtImagen.Text);
+            cargarImagen(txtImagen.Text);
         }
 
-        private void CargarImagen(string imagen)
+        private void cargarImagen(string imagen)
         {
             try
             {

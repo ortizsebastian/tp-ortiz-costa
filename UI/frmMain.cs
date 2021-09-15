@@ -20,19 +20,19 @@ namespace UI
         }
         private void tsmi_agregarArticulos_Click(object sender, EventArgs e)
         {
-            frmAgregar AgregarArticulo = new frmAgregar();
-            AgregarArticulo.ShowDialog();
+            frmAgregar agregarArticulo = new frmAgregar();
+            agregarArticulo.ShowDialog();
             cargarAuto();
         }
         private void tsmi_eliminarArticulos_Click(object sender, EventArgs e)
         {
-            frmEliminar EliminarArticulo = new frmEliminar();
-            EliminarArticulo.ShowDialog();
+            frmEliminar eliminarArticulo = new frmEliminar();
+            eliminarArticulo.ShowDialog();
         }
         private void tsmi_verArticulo_Click(object sender, EventArgs e)
         {
-            frmListar ListarUno = new frmListar();
-            ListarUno.ShowDialog();
+            frmListar listar = new frmListar();
+            listar.ShowDialog();
         }
 
         private List<Articulo> ListaArticulos;
@@ -43,21 +43,28 @@ namespace UI
 
         private void dgvArticulos_SelectionChanged(object sender, EventArgs e)
         {
-            Articulo Seleccionado = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
-            CargarImagen(Seleccionado.ImagenUrl);
+            Articulo seleccionado = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
+            cargarImagen(seleccionado.ImagenUrl);
         }
 
         private void cargarAuto()
         {
-            ArticuloNegocio Negocio = new ArticuloNegocio();
+            ArticuloNegocio negocio = new ArticuloNegocio();
 
-            ListaArticulos = Negocio.Listar();
-            dgvArticulos.DataSource = ListaArticulos;
-            dgvArticulos.Columns["ImagenUrl"].Visible = false;
-            CargarImagen(ListaArticulos[0].ImagenUrl);
+            try
+            {
+                ListaArticulos = negocio.listar();
+                dgvArticulos.DataSource = ListaArticulos;
+                dgvArticulos.Columns["ImagenUrl"].Visible = false;
+                cargarImagen(ListaArticulos[0].ImagenUrl);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
         }
 
-        private void CargarImagen(string imagen)
+        private void cargarImagen(string imagen)
         {
             try
             {

@@ -11,33 +11,38 @@ namespace Negocio
 {
     public class ArticuloNegocio
     {
-        public List<Articulo> Listar()
+        public List<Articulo> listar()
         {
-            List<Articulo> Lista = new List<Articulo>();
-            AccesoDatos Datos = new AccesoDatos();
+            List<Articulo> lista = new List<Articulo>();
+            AccesoDatos datos = new AccesoDatos();
 
             try
             {
-                Datos.SetConsulta("Select distinct Codigo as Código, Nombre,  ImagenUrl, A.Descripcion as Descripción, C.Descripcion as Categoría, M.Descripcion as Marca From ARTICULOS A, MARCAS M, CATEGORIAS C Where A.IdCategoria = C.Id and A.IdMarca = M.Id order by Nombre asc");
-                Datos.EjecutarLectura();
+                datos.setConsulta("SELECT A.Nombre, A.ImagenUrl, A.Codigo AS Código, A.Descripcion AS Descripción, C.Descripcion AS Categoría, M.Descripcion AS Marca FROM ARTICULOS A LEFT JOIN MARCAS M ON A.IdMarca = M.Id LEFT JOIN CATEGORIAS C ON A.IdCategoria = C.Id ORDER BY Nombre ASC");
+                datos.ejecutarLectura();
 
-                while (Datos.Lector.Read())
+                while (datos.Lector.Read())
                 {
-                    Articulo Auxiliar = new Articulo();
-                    Auxiliar.Codigo = (string)Datos.Lector["Código"];
-                    Auxiliar.Nombre = (string)Datos.Lector["Nombre"];
-                    Auxiliar.Descripcion = (string)Datos.Lector["Descripción"];
-                    Auxiliar.ImagenUrl = (string)Datos.Lector["ImagenUrl"];
+                    Articulo obj = new Articulo();
+                    obj.Codigo = (string)datos.Lector["Código"];
+                    obj.Nombre = (string)datos.Lector["Nombre"];
+                    obj.Descripcion = (string)datos.Lector["Descripción"];
 
-                    Auxiliar.Categoria = new Categoria();
-                    Auxiliar.Categoria.Descripcion = (string)Datos.Lector["Categoría"];
-                    Auxiliar.Marca = new Marca();
-                    Auxiliar.Marca.Descripcion = (string)Datos.Lector["Marca"];
-
-                    Lista.Add(Auxiliar);
+                    if(!(datos.Lector["ImagenUrl"] is DBNull))
+                        obj.ImagenUrl = (string)datos.Lector["ImagenUrl"];
+                    obj.Categoria = new Categoria();
+                    if (!(datos.Lector["Categoría"] is DBNull))
+                        obj.Categoria.Descripcion = (string)datos.Lector["Categoría"];
+                    else obj.Categoria.Descripcion = "Desconocida";
+                    obj.Marca = new Marca();
+                    if (!(datos.Lector["Marca"] is DBNull))
+                        obj.Marca.Descripcion = (string)datos.Lector["Marca"];
+                    else
+                        obj.Marca.Descripcion = "Desconocida";
+                    lista.Add(obj);
                 }
 
-                return Lista;
+                return lista;
             }
             catch (Exception ex)
             {
@@ -45,7 +50,7 @@ namespace Negocio
             }
             finally
             {
-                Datos.CerrarConexion();
+                datos.cerrarConexion();
             }
         }
 
@@ -55,9 +60,9 @@ namespace Negocio
 
             try
             {
-                datos.SetConsulta("insert into ARTICULOS (Codigo, Nombre, Descripcion, ImagenUrl, Precio, IdCategoria, IdMarca) values ('" + nuevoArticulo.Codigo + "', '" + nuevoArticulo.Nombre + "', " +
+                datos.setConsulta("insert into ARTICULOS (Codigo, Nombre, Descripcion, ImagenUrl, Precio, IdCategoria, IdMarca) values ('" + nuevoArticulo.Codigo + "', '" + nuevoArticulo.Nombre + "', " +
                     "'" + nuevoArticulo.Descripcion + "', '" + nuevoArticulo.ImagenUrl + "', '" + nuevoArticulo.Precio + "', '" + nuevoArticulo.Categoria.Id + "', '" + nuevoArticulo.Marca.Id + "')");
-                datos.EjecutarAccion();
+                datos.ejecutarAccion();
             }
             catch (Exception ex)
             {
@@ -66,11 +71,11 @@ namespace Negocio
             }
             finally
             {
-                datos.CerrarConexion();
+                datos.cerrarConexion();
             }
         }
 
-        public void modificar(Articulo modificarArticulo)
+        public void Modificar(Articulo modificarArticulo)
         {
 
         }

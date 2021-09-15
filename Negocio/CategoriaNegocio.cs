@@ -12,24 +12,24 @@ namespace Negocio
     {
         public List<Categoria> listar()
         {
-            List<Categoria> Lista = new List<Categoria>();
-            AccesoDatos Datos = new AccesoDatos();
+            List<Categoria> lista = new List<Categoria>();
+            AccesoDatos datos = new AccesoDatos();
 
             try
             {
-                Datos.SetConsulta("Select distinct Id, Descripcion From CATEGORIAS");
-                Datos.EjecutarLectura();
+                datos.setConsulta("Select distinct Id, Descripcion From CATEGORIAS");
+                datos.ejecutarLectura();
 
-                while (Datos.Lector.Read())
+                while (datos.Lector.Read())
                 {
-                    Categoria Auxiliar = new Categoria();
-                    Auxiliar.Id = (int)Datos.Lector["Id"];
-                    Auxiliar.Descripcion = (string)Datos.Lector["Descripcion"];
+                    Categoria obj = new Categoria();
+                    obj.Id = (int)datos.Lector["Id"];
+                    obj.Descripcion = (string)datos.Lector["Descripcion"];
 
-                    Lista.Add(Auxiliar);
+                    lista.Add(obj);
                 }
 
-                return Lista;
+                return lista;
             }
             catch (Exception ex)
             {
@@ -37,7 +37,7 @@ namespace Negocio
             }
             finally
             {
-                Datos.CerrarConexion();
+                datos.cerrarConexion();
             }
         }
     }
