@@ -18,13 +18,13 @@ namespace Negocio
 
             try
             {
-                datos.setConsulta("SELECT A.Id, A.Nombre, A.ImagenUrl, A.Codigo AS Código, A.Descripcion AS Descripción, A.IdCategoria, A.IdMarca, C.Descripcion AS Categoría, M.Descripcion AS Marca FROM ARTICULOS A LEFT JOIN MARCAS M ON A.IdMarca = M.Id LEFT JOIN CATEGORIAS C ON A.IdCategoria = C.Id ORDER BY Nombre ASC");
+                datos.setConsulta("SELECT A.Id AS ID, A.Nombre, A.ImagenUrl, A.Codigo AS Código, A.Descripcion AS Descripción, A.IdCategoria, A.IdMarca, C.Descripcion AS Categoría, M.Descripcion AS Marca FROM ARTICULOS A LEFT JOIN MARCAS M ON A.IdMarca = M.Id LEFT JOIN CATEGORIAS C ON A.IdCategoria = C.Id ORDER BY Nombre ASC");
                 datos.ejecutarLectura();
 
                 while (datos.Lector.Read())
                 {
                     Articulo obj = new Articulo();
-                    obj.Id = (int)datos.Lector["Id"];
+                    obj.Id = (int)datos.Lector["ID"];
                     obj.Codigo = (string)datos.Lector["Código"];
                     obj.Nombre = (string)datos.Lector["Nombre"];
                     obj.Descripcion = (string)datos.Lector["Descripción"];
@@ -78,7 +78,7 @@ namespace Negocio
             }
         }
 
-        public void Modificar(Articulo modificarArticulo)
+        public void modificar(Articulo modificarArticulo)
         {
             AccesoDatos datos = new AccesoDatos();
             try
@@ -87,16 +87,16 @@ namespace Negocio
                     "Descripcion = '" + modificarArticulo.Descripcion + "', IdCategoria = '" + modificarArticulo.Categoria.Id + "', " +
                     "IdMarca = '" + modificarArticulo.Marca.Id + "', ImagenUrl = '" + modificarArticulo.ImagenUrl + "', Precio = '" + modificarArticulo.Precio + "' " +
                     "where Id = '" + modificarArticulo.Id + "'");
-
+          
                 /*
-                datos.setConsulta("UPDATE ARTICULOS set Codigo = 'S', Nombre = '', Descripcion = '', IdCategoria = 1, IdMarca = 1, ImagenUrl = '', Precio = 1 where Id = 1");
-
+                datos.setConsulta("UPDATE ARTICULOS set Codigo = @codigo, Nombre = @nombre, Descripcion = @desc, IdCategoria = @idcategoria, IdMarca = @idmarca, ImagenUrl = @img, Precio = @precio where Id = @id");
+           
                 datos.setearParametro("@codigo", modificarArticulo.Codigo);
                 datos.setearParametro("@nombre", modificarArticulo.Nombre);
-                datos.setearParametro("@descripcion", modificarArticulo.Descripcion);
+                datos.setearParametro("@desc", modificarArticulo.Descripcion);
                 datos.setearParametro("@categoria", modificarArticulo.Categoria.Id);
                 datos.setearParametro("@marca", modificarArticulo.Marca.Id); 
-                datos.setearParametro("@imagen", modificarArticulo.ImagenUrl);
+                datos.setearParametro("@img", modificarArticulo.ImagenUrl);
                 datos.setearParametro("@precio", modificarArticulo.Precio);
                 datos.setearParametro("@id", modificarArticulo.Id);
                 */

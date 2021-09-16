@@ -30,11 +30,7 @@ namespace UI
             frmEliminar eliminarArticulo = new frmEliminar();
             eliminarArticulo.ShowDialog();
         }
-        private void tsmi_verArticulo_Click(object sender, EventArgs e)
-        {
-            frmListar listar = new frmListar();
-            listar.ShowDialog();
-        }
+
         private void tsmi_modificarArticulo_Click(object sender, EventArgs e)
         {
             Articulo seleccionado;
@@ -45,6 +41,13 @@ namespace UI
             modificarArticulo.ShowDialog();
             cargarAuto();
         }
+        private void tsmi_verArticulo_Click(object sender, EventArgs e)
+        {
+            Articulo seleccionado = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
+            frmVerDetalle verDetalle = new frmVerDetalle(seleccionado);
+            verDetalle.ShowDialog();
+        }
+
         private void frmMain_Load(object sender, EventArgs e)
         {
             cargarAuto();
@@ -52,7 +55,7 @@ namespace UI
 
         private void dgvArticulos_SelectionChanged(object sender, EventArgs e)
         {
-            Articulo seleccionado = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
+            Articulo seleccionado = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;            
             cargarImagen(seleccionado.ImagenUrl);
         }
 
@@ -64,7 +67,11 @@ namespace UI
             {
                 ListaArticulos = negocio.listar();
                 dgvArticulos.DataSource = ListaArticulos;
+                dgvArticulos.Columns["ID"].Visible = false;
                 dgvArticulos.Columns["ImagenUrl"].Visible = false;
+                dgvArticulos.Columns["Categoria"].Visible = false;
+                dgvArticulos.Columns["Marca"].Visible = false;
+                dgvArticulos.Columns["Descripcion"].Visible = false;
                 cargarImagen(ListaArticulos[0].ImagenUrl);
             }
             catch (Exception ex)
@@ -83,5 +90,6 @@ namespace UI
                 pbxArticulos.Load("https://www.salonlfc.com/wp-content/uploads/2018/01/image-not-found-scaled-1150x647.png");
             }
         }
+
     }
 }

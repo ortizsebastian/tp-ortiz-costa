@@ -44,14 +44,14 @@ namespace UI
 
                 if (articuloSeleccion.Id != 0)
                 {
-                    negocio.Modificar(articuloSeleccion);
-                    MessageBox.Show("Datos modificados correctamente", "Datos modificados", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    negocio.modificar(articuloSeleccion);
+                    MessageBox.Show("Datos modificados correctamente.", "Datos modificados.", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     Close();
                 }
                 else
                 {
                     negocio.agregar(articuloSeleccion);
-                    MessageBox.Show("Datos agregados correctamente", "Datos agregados", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Datos agregados correctamente.", "Datos agregados.", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     limpiar();
                 }
 
@@ -59,7 +59,7 @@ namespace UI
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Hubo un error al agregar o modificar datos", "Error al modificar o agregar datos", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Hubo un error al intentar agregar o modificar datos.", "Error al modificar o agregar datos.", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 MessageBox.Show(ex.ToString());
             }
         }
