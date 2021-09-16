@@ -35,6 +35,7 @@ namespace UI
             // 
             // dgvArticulosDetalle
             // 
+            this.dgvArticulosDetalle.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvArticulosDetalle.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvArticulosDetalle.Location = new System.Drawing.Point(13, 13);
             this.dgvArticulosDetalle.Name = "dgvArticulosDetalle";
@@ -48,6 +49,7 @@ namespace UI
             this.ClientSize = new System.Drawing.Size(769, 88);
             this.Controls.Add(this.dgvArticulosDetalle);
             this.Name = "frmVerDetalle";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Detalle del Artículo";
             this.Load += new System.EventHandler(this.frmVerDetalle_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvArticulosDetalle)).EndInit();

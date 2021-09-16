@@ -18,7 +18,7 @@ namespace Negocio
 
             try
             {
-                datos.setConsulta("SELECT A.Id AS ID, A.Nombre, A.ImagenUrl, A.Codigo AS Código, A.Descripcion AS Descripción, A.IdCategoria, A.IdMarca, C.Descripcion AS Categoría, M.Descripcion AS Marca FROM ARTICULOS A LEFT JOIN MARCAS M ON A.IdMarca = M.Id LEFT JOIN CATEGORIAS C ON A.IdCategoria = C.Id ORDER BY Nombre ASC");
+                datos.setConsulta("SELECT A.Id AS ID, A.Nombre, A.ImagenUrl, A.Precio, A.Codigo AS Código, A.Descripcion AS Descripción, A.IdCategoria, A.IdMarca, C.Descripcion AS Categoría, M.Descripcion AS Marca FROM ARTICULOS A LEFT JOIN MARCAS M ON A.IdMarca = M.Id LEFT JOIN CATEGORIAS C ON A.IdCategoria = C.Id ORDER BY Nombre ASC");
                 datos.ejecutarLectura();
 
                 while (datos.Lector.Read())
@@ -28,6 +28,7 @@ namespace Negocio
                     obj.Codigo = (string)datos.Lector["Código"];
                     obj.Nombre = (string)datos.Lector["Nombre"];
                     obj.Descripcion = (string)datos.Lector["Descripción"];
+                    obj.Precio = (decimal)datos.Lector["Precio"];
 
                     if(!(datos.Lector["ImagenUrl"] is DBNull))
                         obj.ImagenUrl = (string)datos.Lector["ImagenUrl"];
