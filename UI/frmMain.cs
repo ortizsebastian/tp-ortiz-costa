@@ -91,5 +91,9 @@ namespace UI
         {
             subMenu(new frmEliminar());
         }
+        private void btnListar_Click(object sender, EventArgs e)
+        {
+            subMenu(new frmListar());
+        }
     }
 }

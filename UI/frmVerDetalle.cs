@@ -28,5 +28,10 @@ namespace UI
             dgvArticulosDetalle.DataSource = listaArticulos;
             dgvArticulosDetalle.Columns["ImagenUrl"].Visible = false;
         }
+
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

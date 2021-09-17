@@ -85,12 +85,6 @@ namespace UI
             txtImagen.Clear();
             txtPrecio.Clear();
         }
-
-        private void btnAtras_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
-
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             {
@@ -130,6 +124,11 @@ namespace UI
                     MessageBox.Show(ex.ToString());
                 }
             }
+        }
+
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

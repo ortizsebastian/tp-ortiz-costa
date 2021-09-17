@@ -39,7 +39,7 @@ namespace UI
             this.cboCategoria = new System.Windows.Forms.ComboBox();
             this.pbxVistaPrevia = new System.Windows.Forms.PictureBox();
             this.lblVistaPrevia = new System.Windows.Forms.Label();
-            this.btnAtras = new System.Windows.Forms.Button();
+            this.btnCerrar = new System.Windows.Forms.Button();
             this.panelPrincipal = new System.Windows.Forms.Panel();
             this.lblPrecio = new System.Windows.Forms.Label();
             this.lblImagenUrl = new System.Windows.Forms.Label();
@@ -60,7 +60,7 @@ namespace UI
             this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGuardar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardar.ForeColor = System.Drawing.Color.Black;
-            this.btnGuardar.Location = new System.Drawing.Point(249, 277);
+            this.btnGuardar.Location = new System.Drawing.Point(240, 277);
             this.btnGuardar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(72, 30);
@@ -165,23 +165,23 @@ namespace UI
             this.lblVistaPrevia.TabIndex = 18;
             this.lblVistaPrevia.Text = "Vista previa de la imagen";
             // 
-            // btnAtras
+            // btnCerrar
             // 
-            this.btnAtras.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnAtras.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnAtras.FlatAppearance.BorderSize = 0;
-            this.btnAtras.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Crimson;
-            this.btnAtras.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAtras.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAtras.ForeColor = System.Drawing.Color.Black;
-            this.btnAtras.Location = new System.Drawing.Point(327, 277);
-            this.btnAtras.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnAtras.Name = "btnAtras";
-            this.btnAtras.Size = new System.Drawing.Size(72, 30);
-            this.btnAtras.TabIndex = 8;
-            this.btnAtras.Text = "Cerrar";
-            this.btnAtras.UseVisualStyleBackColor = false;
-            this.btnAtras.Click += new System.EventHandler(this.btnAtras_Click);
+            this.btnCerrar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnCerrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnCerrar.FlatAppearance.BorderSize = 0;
+            this.btnCerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Crimson;
+            this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCerrar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCerrar.ForeColor = System.Drawing.Color.Black;
+            this.btnCerrar.Location = new System.Drawing.Point(327, 277);
+            this.btnCerrar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnCerrar.Name = "btnCerrar";
+            this.btnCerrar.Size = new System.Drawing.Size(72, 30);
+            this.btnCerrar.TabIndex = 8;
+            this.btnCerrar.Text = "Cerrar";
+            this.btnCerrar.UseVisualStyleBackColor = false;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
             // panelPrincipal
             // 
@@ -190,13 +190,13 @@ namespace UI
             this.panelPrincipal.Controls.Add(this.lblPrecio);
             this.panelPrincipal.Controls.Add(this.lblImagenUrl);
             this.panelPrincipal.Controls.Add(this.lblMarca);
+            this.panelPrincipal.Controls.Add(this.btnCerrar);
             this.panelPrincipal.Controls.Add(this.btnGuardar);
             this.panelPrincipal.Controls.Add(this.lblCategoria);
             this.panelPrincipal.Controls.Add(this.lblDescripcion);
             this.panelPrincipal.Controls.Add(this.lblNombre);
             this.panelPrincipal.Controls.Add(this.lblCodigo);
             this.panelPrincipal.Controls.Add(this.txtNombre);
-            this.panelPrincipal.Controls.Add(this.btnAtras);
             this.panelPrincipal.Controls.Add(this.txtCodigo);
             this.panelPrincipal.Controls.Add(this.txtDescripcion);
             this.panelPrincipal.Controls.Add(this.cboMarca);
@@ -327,7 +327,7 @@ namespace UI
         private System.Windows.Forms.ComboBox cboCategoria;
         private System.Windows.Forms.PictureBox pbxVistaPrevia;
         private System.Windows.Forms.Label lblVistaPrevia;
-        private System.Windows.Forms.Button btnAtras;
+        private System.Windows.Forms.Button btnCerrar;
         private System.Windows.Forms.Panel panelPrincipal;
         private System.Windows.Forms.Label lblPrecio;
         private System.Windows.Forms.Label lblImagenUrl;
