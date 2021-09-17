@@ -25,44 +25,6 @@ namespace UI
             this.articuloSeleccion = articuloSeleccionado;
         }
 
-        private void btnAgregar_Click(object sender, EventArgs e)
-        {
-            ArticuloNegocio negocio = new ArticuloNegocio();
-
-            try
-            {
-                if(articuloSeleccion == null)
-                    articuloSeleccion = new Articulo();
-                
-                articuloSeleccion.Codigo = txtCodigo.Text;
-                articuloSeleccion.Nombre = txtNombre.Text;
-                articuloSeleccion.Descripcion = txtDescripcion.Text;
-                articuloSeleccion.ImagenUrl = txtImagen.Text;
-                articuloSeleccion.Precio = int.Parse(txtPrecio.Text);
-                articuloSeleccion.Marca = (Marca)cboMarca.SelectedItem;
-                articuloSeleccion.Categoria = (Categoria)cboCategoria.SelectedItem;
-
-                if (articuloSeleccion.Id != 0)
-                {
-                    negocio.modificar(articuloSeleccion);
-                    MessageBox.Show("Datos modificados correctamente.", "Datos modificados.", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    Close();
-                }
-                else
-                {
-                    negocio.agregar(articuloSeleccion);
-                    MessageBox.Show("Datos agregados correctamente.", "Datos agregados.", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    limpiar();
-                }
-
-                
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Hubo un error al intentar agregar o modificar datos.", "Error al modificar o agregar datos.", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                MessageBox.Show(ex.ToString());
-            }
-        }
 
         private void frmAgregar_Load(object sender, EventArgs e)
         {
@@ -107,11 +69,11 @@ namespace UI
         {
             try
             {
-                pbxVistaPrecia.Load(imagen);
+                pbxVistaPrevia.Load(imagen);
             }
             catch (Exception)
             {
-                pbxVistaPrecia.Load("https://www.salonlfc.com/wp-content/uploads/2018/01/image-not-found-scaled-1150x647.png");
+                pbxVistaPrevia.Load("https://www.salonlfc.com/wp-content/uploads/2018/01/image-not-found-scaled-1150x647.png");
             }
         }
 
@@ -127,6 +89,47 @@ namespace UI
         private void btnAtras_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
+            {
+                ArticuloNegocio negocio = new ArticuloNegocio();
+
+                try
+                {
+                    if (articuloSeleccion == null)
+                        articuloSeleccion = new Articulo();
+
+                    articuloSeleccion.Codigo = txtCodigo.Text;
+                    articuloSeleccion.Nombre = txtNombre.Text;
+                    articuloSeleccion.Descripcion = txtDescripcion.Text;
+                    articuloSeleccion.ImagenUrl = txtImagen.Text;
+                    articuloSeleccion.Precio = int.Parse(txtPrecio.Text);
+                    articuloSeleccion.Marca = (Marca)cboMarca.SelectedItem;
+                    articuloSeleccion.Categoria = (Categoria)cboCategoria.SelectedItem;
+
+                    if (articuloSeleccion.Id != 0)
+                    {
+                        negocio.modificar(articuloSeleccion);
+                        MessageBox.Show("Datos modificados correctamente.", "Datos modificados.", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        Close();
+                    }
+                    else
+                    {
+                        negocio.agregar(articuloSeleccion);
+                        MessageBox.Show("Datos agregados correctamente.", "Datos agregados.", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        limpiar();
+                    }
+
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Hubo un error al intentar agregar o modificar datos.", "Error al modificar o agregar datos.", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    MessageBox.Show(ex.ToString());
+                }
+            }
         }
     }
 }

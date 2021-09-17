@@ -19,50 +19,10 @@ namespace UI
         {
             InitializeComponent();
         }
-        private void tsmi_agregarArticulos_Click(object sender, EventArgs e)
-        {
-            frmAgregarModificar agregarArticulo = new frmAgregarModificar();
-            agregarArticulo.ShowDialog();
-            cargarAuto();
-        }
-        private void tsmi_eliminarArticulos_Click(object sender, EventArgs e)
-        {
-            frmEliminar eliminarArticulo = new frmEliminar();
-            eliminarArticulo.ShowDialog();
-        }
-
-        private void tsmi_modificarArticulo_Click(object sender, EventArgs e)
-        {
-            Articulo seleccionado;
-            seleccionado = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
-
-            frmAgregarModificar modificarArticulo = new frmAgregarModificar(seleccionado);
-            modificarArticulo.Text = "Modificar Artículo";
-            modificarArticulo.ShowDialog();
-            cargarAuto();
-        }
-        private void tsmi_verArticulo_Click(object sender, EventArgs e)
-        {
-            Articulo seleccionado = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
-            frmVerDetalle verDetalle = new frmVerDetalle(seleccionado);
-            verDetalle.ShowDialog();
-        }
-
-        private void frmMain_Load(object sender, EventArgs e)
-        {
-            cargarAuto();
-        }
-
-        private void dgvArticulos_SelectionChanged(object sender, EventArgs e)
-        {
-            Articulo seleccionado = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;            
-            cargarImagen(seleccionado.ImagenUrl);
-        }
-
-        private void cargarAuto()
+        private void cargarGrid()
         {
             ArticuloNegocio negocio = new ArticuloNegocio();
-
+            
             try
             {
                 ListaArticulos = negocio.listar();
@@ -90,6 +50,46 @@ namespace UI
                 pbxArticulos.Load("https://www.salonlfc.com/wp-content/uploads/2018/01/image-not-found-scaled-1150x647.png");
             }
         }
-
+        private void frmMain_Load(object sender, EventArgs e)
+        {
+            cargarGrid();
+        }
+        private void dgvArticulos_SelectionChanged(object sender, EventArgs e)
+        {
+            Articulo seleccionado = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;            
+            cargarImagen(seleccionado.ImagenUrl);
+        }
+        private Form activeForm = null;
+        private void subMenu(Form childForm)
+        {
+            if (activeForm != null)
+                activeForm.Close();
+            activeForm = childForm;
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+            panelContenedor.Controls.Add(childForm);
+            panelContenedor.Tag = childForm;
+            childForm.BringToFront();
+            childForm.Show();
+        }
+        private void btnVerDetalle_Click(object sender, EventArgs e)
+        {
+            Articulo seleccionado = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
+            subMenu(new frmVerDetalle(seleccionado));
+        }
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            subMenu(new frmAgregarModificar());
+        }
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            Articulo seleccionado = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
+            subMenu(new frmAgregarModificar(seleccionado));
+        }
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            subMenu(new frmEliminar());
+        }
     }
 }

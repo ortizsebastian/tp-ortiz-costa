@@ -39,14 +39,14 @@ namespace UI
             this.dgvArticulosDetalle.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvArticulosDetalle.Location = new System.Drawing.Point(13, 13);
             this.dgvArticulosDetalle.Name = "dgvArticulosDetalle";
-            this.dgvArticulosDetalle.Size = new System.Drawing.Size(744, 60);
+            this.dgvArticulosDetalle.Size = new System.Drawing.Size(663, 60);
             this.dgvArticulosDetalle.TabIndex = 0;
             // 
             // frmVerDetalle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(769, 88);
+            this.ClientSize = new System.Drawing.Size(693, 95);
             this.Controls.Add(this.dgvArticulosDetalle);
             this.Name = "frmVerDetalle";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

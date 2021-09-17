@@ -16,10 +16,10 @@ namespace UI
     {
         private Articulo articuloSeleccion = null;
 
-        public frmVerDetalle(Articulo articuloSeleccionado)
+        public frmVerDetalle(Articulo articuloSeleccion)
         {
             InitializeComponent();
-            this.articuloSeleccion = articuloSeleccionado;
+            this.articuloSeleccion = articuloSeleccion;
         }
         private void frmVerDetalle_Load(object sender, EventArgs e)
         {
