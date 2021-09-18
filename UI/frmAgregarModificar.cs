@@ -14,7 +14,7 @@ namespace UI
 {
     public partial class frmAgregarModificar : Form
     {
-        private Articulo articuloSeleccion = null;
+        private Articulo articuloSeleccionado = null;
         public frmAgregarModificar()
         {
             InitializeComponent();
@@ -22,9 +22,8 @@ namespace UI
         public frmAgregarModificar(Articulo articuloSeleccionado)
         {
             InitializeComponent();
-            this.articuloSeleccion = articuloSeleccionado;
+            this.articuloSeleccionado = articuloSeleccionado;
         }
-
 
         private void frmAgregar_Load(object sender, EventArgs e)
         {
@@ -40,31 +39,27 @@ namespace UI
                 cboMarca.ValueMember = "Id";
                 cboMarca.DisplayMember = "Descripcion";
 
-                if (articuloSeleccion != null)
+                if (articuloSeleccionado != null)
                 {
-                    txtCodigo.Text = articuloSeleccion.Codigo;
-                    txtNombre.Text = articuloSeleccion.Nombre;
-                    txtDescripcion.Text = articuloSeleccion.Descripcion;
-                    txtImagen.Text = articuloSeleccion.ImagenUrl;
-                    cargarImagen(articuloSeleccion.ImagenUrl);
-                    txtPrecio.Text = articuloSeleccion.Precio.ToString();
-                    cboCategoria.SelectedValue = articuloSeleccion.Categoria.Id;
-                    cboMarca.SelectedValue = articuloSeleccion.Marca.Id;
-
+                    txtCodigo.Text = articuloSeleccionado.Codigo;
+                    txtNombre.Text = articuloSeleccionado.Nombre;
+                    txtDescripcion.Text = articuloSeleccionado.Descripcion;
+                    txtImagen.Text = articuloSeleccionado.ImagenUrl;
+                    cargarImagen(articuloSeleccionado.ImagenUrl);
+                    txtPrecio.Text = articuloSeleccionado.Precio.ToString();
+                    cboCategoria.SelectedValue = articuloSeleccionado.Categoria.Id;
+                    cboMarca.SelectedValue = articuloSeleccionado.Marca.Id;
                 }
             }
             catch (Exception ex)
             {
-
                 MessageBox.Show(ex.ToString());
             }
         }
-
         private void txtImagen_Leave(object sender, EventArgs e)
         {
             cargarImagen(txtImagen.Text);
         }
-
         private void cargarImagen(string imagen)
         {
             try
@@ -76,47 +71,47 @@ namespace UI
                 pbxVistaPrevia.Load("https://www.salonlfc.com/wp-content/uploads/2018/01/image-not-found-scaled-1150x647.png");
             }
         }
-
-        void limpiar()
+        private void limpiar()
+                {
+                    txtCodigo.Clear();
+                    txtNombre.Clear();
+                    txtDescripcion.Clear();
+                    txtImagen.Clear();
+                    txtPrecio.Clear();
+                }
+        private void btnCerrar_Click(object sender, EventArgs e)
         {
-            txtCodigo.Clear();
-            txtNombre.Clear();
-            txtDescripcion.Clear();
-            txtImagen.Clear();
-            txtPrecio.Clear();
+            Close();
         }
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             {
                 ArticuloNegocio negocio = new ArticuloNegocio();
-
                 try
                 {
-                    if (articuloSeleccion == null)
-                        articuloSeleccion = new Articulo();
+                    if (articuloSeleccionado == null)
+                        articuloSeleccionado = new Articulo();
 
-                    articuloSeleccion.Codigo = txtCodigo.Text;
-                    articuloSeleccion.Nombre = txtNombre.Text;
-                    articuloSeleccion.Descripcion = txtDescripcion.Text;
-                    articuloSeleccion.ImagenUrl = txtImagen.Text;
-                    articuloSeleccion.Precio = int.Parse(txtPrecio.Text);
-                    articuloSeleccion.Marca = (Marca)cboMarca.SelectedItem;
-                    articuloSeleccion.Categoria = (Categoria)cboCategoria.SelectedItem;
+                    articuloSeleccionado.Codigo = txtCodigo.Text;
+                    articuloSeleccionado.Nombre = txtNombre.Text;
+                    articuloSeleccionado.Descripcion = txtDescripcion.Text;
+                    articuloSeleccionado.ImagenUrl = txtImagen.Text;
+                    articuloSeleccionado.Precio = int.Parse(txtPrecio.Text);
+                    articuloSeleccionado.Marca = (Marca)cboMarca.SelectedItem;
+                    articuloSeleccionado.Categoria = (Categoria)cboCategoria.SelectedItem;
 
-                    if (articuloSeleccion.Id != 0)
+                    if (articuloSeleccionado.Id != 0)
                     {
-                        negocio.modificar(articuloSeleccion);
+                        negocio.modificar(articuloSeleccionado);
                         MessageBox.Show("Datos modificados correctamente.", "Datos modificados.", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         Close();
                     }
                     else
                     {
-                        negocio.agregar(articuloSeleccion);
+                        negocio.agregar(articuloSeleccionado);
                         MessageBox.Show("Datos agregados correctamente.", "Datos agregados.", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         limpiar();
                     }
-
-
                 }
                 catch (Exception ex)
                 {
@@ -124,11 +119,6 @@ namespace UI
                     MessageBox.Show(ex.ToString());
                 }
             }
-        }
-
-        private void btnCerrar_Click(object sender, EventArgs e)
-        {
-            Close();
         }
     }
 }

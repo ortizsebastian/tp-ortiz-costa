@@ -14,24 +14,45 @@ namespace UI
 {
     public partial class frmVerDetalle : Form
     {
-        private Articulo articuloSeleccion = null;
-
-        public frmVerDetalle(Articulo articuloSeleccion)
+        private Articulo articuloSeleccionado = null;
+        public frmVerDetalle()
         {
             InitializeComponent();
-            this.articuloSeleccion = articuloSeleccion;
+        }
+        public frmVerDetalle(Articulo articuloSeleccionado)
+        {
+            InitializeComponent();
+            this.articuloSeleccionado = articuloSeleccionado;
+        }
+
+        private void cargarImagen(string imagen)
+        {
+            try
+            {
+                pbxArticulos.Load(imagen);
+            }
+            catch (Exception)
+            {
+                pbxArticulos.Load("https://www.salonlfc.com/wp-content/uploads/2018/01/image-not-found-scaled-1150x647.png");
+            }
         }
         private void frmVerDetalle_Load(object sender, EventArgs e)
         {
             List<Articulo> listaArticulos = new List<Articulo>();
-            listaArticulos.Add(articuloSeleccion);
+            listaArticulos.Add(articuloSeleccionado);
             dgvArticulosDetalle.DataSource = listaArticulos;
             dgvArticulosDetalle.Columns["ImagenUrl"].Visible = false;
+            cargarImagen(listaArticulos[0].ImagenUrl);
         }
-
         private void btnCerrar_Click(object sender, EventArgs e)
         {
             Close();
         }
+
     }
 }
+
+
+
+
+

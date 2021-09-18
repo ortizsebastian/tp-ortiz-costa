@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace UI
 {
-    public partial class frmListar : Form
+    public partial class frmBuscar : Form
     {
-        public frmListar()
+        public frmBuscar()
         {
             InitializeComponent();
         }

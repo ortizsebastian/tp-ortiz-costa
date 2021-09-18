@@ -52,17 +52,17 @@
     <Compile Include="frmAgregarModificar.Designer.cs">
       <DependentUpon>frmAgregarModificar.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmBuscar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBuscar.Designer.cs">
+      <DependentUpon>frmBuscar.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmEliminar.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmEliminar.Designer.cs">
       <DependentUpon>frmEliminar.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmListar.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmListar.Designer.cs">
-      <DependentUpon>frmListar.cs</DependentUpon>
     </Compile>
     <Compile Include="frmMain.cs">
       <SubType>Form</SubType>
@@ -81,11 +81,11 @@
     <EmbeddedResource Include="frmAgregarModificar.resx">
       <DependentUpon>frmAgregarModificar.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmBuscar.resx">
+      <DependentUpon>frmBuscar.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmEliminar.resx">
       <DependentUpon>frmEliminar.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmListar.resx">
-      <DependentUpon>frmListar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
@@ -96,16 +96,16 @@
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -124,6 +124,24 @@
       <Project>{943fa947-29a8-4282-b1f4-593fc50f6ae5}</Project>
       <Name>Negocio</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ui_essential_cross_icon_192144.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ui_essential_folder_upload_icon_192098.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ui_essential_delete_junk_icon_192143.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ui_essential_magnifier_search_icon_192119.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ui_essential_filter_options_icon_192093.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ui_essential_settings_icon_192199.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

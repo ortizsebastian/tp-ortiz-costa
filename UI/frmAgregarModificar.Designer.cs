@@ -37,31 +37,30 @@ namespace UI
             this.txtPrecio = new System.Windows.Forms.TextBox();
             this.cboMarca = new System.Windows.Forms.ComboBox();
             this.cboCategoria = new System.Windows.Forms.ComboBox();
-            this.pbxVistaPrevia = new System.Windows.Forms.PictureBox();
             this.lblVistaPrevia = new System.Windows.Forms.Label();
-            this.btnCerrar = new System.Windows.Forms.Button();
             this.panelPrincipal = new System.Windows.Forms.Panel();
             this.lblPrecio = new System.Windows.Forms.Label();
             this.lblImagenUrl = new System.Windows.Forms.Label();
             this.lblMarca = new System.Windows.Forms.Label();
+            this.btnCerrar = new System.Windows.Forms.Button();
             this.lblCategoria = new System.Windows.Forms.Label();
             this.lblDescripcion = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
             this.lblCodigo = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pbxVistaPrevia)).BeginInit();
+            this.pbxVistaPrevia = new System.Windows.Forms.PictureBox();
             this.panelPrincipal.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxVistaPrevia)).BeginInit();
             this.SuspendLayout();
             // 
             // btnGuardar
             // 
-            this.btnGuardar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnGuardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnGuardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.btnGuardar.FlatAppearance.BorderSize = 0;
             this.btnGuardar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Crimson;
             this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGuardar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardar.ForeColor = System.Drawing.Color.Black;
-            this.btnGuardar.Location = new System.Drawing.Point(232, 285);
+            this.btnGuardar.Location = new System.Drawing.Point(11, 347);
             this.btnGuardar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(72, 30);
@@ -74,40 +73,40 @@ namespace UI
             // 
             this.txtCodigo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtCodigo.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCodigo.Location = new System.Drawing.Point(173, 32);
+            this.txtCodigo.Location = new System.Drawing.Point(216, 73);
             this.txtCodigo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtCodigo.Name = "txtCodigo";
-            this.txtCodigo.Size = new System.Drawing.Size(226, 23);
+            this.txtCodigo.Size = new System.Drawing.Size(175, 23);
             this.txtCodigo.TabIndex = 0;
             // 
             // txtNombre
             // 
             this.txtNombre.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtNombre.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombre.Location = new System.Drawing.Point(173, 64);
+            this.txtNombre.Location = new System.Drawing.Point(216, 105);
             this.txtNombre.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(226, 23);
+            this.txtNombre.Size = new System.Drawing.Size(175, 23);
             this.txtNombre.TabIndex = 1;
             // 
             // txtDescripcion
             // 
             this.txtDescripcion.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtDescripcion.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDescripcion.Location = new System.Drawing.Point(173, 95);
+            this.txtDescripcion.Location = new System.Drawing.Point(216, 136);
             this.txtDescripcion.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.Size = new System.Drawing.Size(226, 23);
+            this.txtDescripcion.Size = new System.Drawing.Size(175, 23);
             this.txtDescripcion.TabIndex = 2;
             // 
             // txtImagen
             // 
             this.txtImagen.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtImagen.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtImagen.Location = new System.Drawing.Point(173, 192);
+            this.txtImagen.Location = new System.Drawing.Point(216, 233);
             this.txtImagen.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtImagen.Name = "txtImagen";
-            this.txtImagen.Size = new System.Drawing.Size(226, 23);
+            this.txtImagen.Size = new System.Drawing.Size(175, 23);
             this.txtImagen.TabIndex = 5;
             this.txtImagen.Leave += new System.EventHandler(this.txtImagen_Leave);
             // 
@@ -115,10 +114,10 @@ namespace UI
             // 
             this.txtPrecio.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtPrecio.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPrecio.Location = new System.Drawing.Point(173, 223);
+            this.txtPrecio.Location = new System.Drawing.Point(216, 264);
             this.txtPrecio.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtPrecio.Name = "txtPrecio";
-            this.txtPrecio.Size = new System.Drawing.Size(226, 23);
+            this.txtPrecio.Size = new System.Drawing.Size(175, 23);
             this.txtPrecio.TabIndex = 6;
             // 
             // cboMarca
@@ -127,10 +126,10 @@ namespace UI
             this.cboMarca.BackColor = System.Drawing.Color.White;
             this.cboMarca.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboMarca.FormattingEnabled = true;
-            this.cboMarca.Location = new System.Drawing.Point(173, 126);
+            this.cboMarca.Location = new System.Drawing.Point(216, 167);
             this.cboMarca.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cboMarca.Name = "cboMarca";
-            this.cboMarca.Size = new System.Drawing.Size(226, 25);
+            this.cboMarca.Size = new System.Drawing.Size(175, 25);
             this.cboMarca.TabIndex = 3;
             // 
             // cboCategoria
@@ -139,50 +138,21 @@ namespace UI
             this.cboCategoria.BackColor = System.Drawing.Color.White;
             this.cboCategoria.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboCategoria.FormattingEnabled = true;
-            this.cboCategoria.Location = new System.Drawing.Point(173, 159);
+            this.cboCategoria.Location = new System.Drawing.Point(216, 200);
             this.cboCategoria.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cboCategoria.Name = "cboCategoria";
-            this.cboCategoria.Size = new System.Drawing.Size(226, 25);
+            this.cboCategoria.Size = new System.Drawing.Size(175, 25);
             this.cboCategoria.TabIndex = 4;
-            // 
-            // pbxVistaPrevia
-            // 
-            this.pbxVistaPrevia.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pbxVistaPrevia.Location = new System.Drawing.Point(460, 54);
-            this.pbxVistaPrevia.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.pbxVistaPrevia.Name = "pbxVistaPrevia";
-            this.pbxVistaPrevia.Size = new System.Drawing.Size(226, 194);
-            this.pbxVistaPrevia.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbxVistaPrevia.TabIndex = 17;
-            this.pbxVistaPrevia.TabStop = false;
             // 
             // lblVistaPrevia
             // 
             this.lblVistaPrevia.AutoSize = true;
             this.lblVistaPrevia.ForeColor = System.Drawing.Color.Black;
-            this.lblVistaPrevia.Location = new System.Drawing.Point(498, 34);
+            this.lblVistaPrevia.Location = new System.Drawing.Point(503, 72);
             this.lblVistaPrevia.Name = "lblVistaPrevia";
             this.lblVistaPrevia.Size = new System.Drawing.Size(147, 16);
             this.lblVistaPrevia.TabIndex = 18;
             this.lblVistaPrevia.Text = "Vista previa de la imagen";
-            // 
-            // btnCerrar
-            // 
-            this.btnCerrar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnCerrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnCerrar.FlatAppearance.BorderSize = 0;
-            this.btnCerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Crimson;
-            this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCerrar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCerrar.ForeColor = System.Drawing.Color.Black;
-            this.btnCerrar.Location = new System.Drawing.Point(326, 285);
-            this.btnCerrar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(72, 30);
-            this.btnCerrar.TabIndex = 7;
-            this.btnCerrar.Text = "Cerrar";
-            this.btnCerrar.UseVisualStyleBackColor = false;
-            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
             // panelPrincipal
             // 
@@ -207,18 +177,18 @@ namespace UI
             this.panelPrincipal.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelPrincipal.Location = new System.Drawing.Point(0, 0);
             this.panelPrincipal.Name = "panelPrincipal";
-            this.panelPrincipal.Size = new System.Drawing.Size(434, 321);
+            this.panelPrincipal.Size = new System.Drawing.Size(459, 391);
             this.panelPrincipal.TabIndex = 26;
             // 
             // lblPrecio
             // 
             this.lblPrecio.AutoSize = true;
             this.lblPrecio.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.lblPrecio.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPrecio.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPrecio.ForeColor = System.Drawing.Color.White;
-            this.lblPrecio.Location = new System.Drawing.Point(55, 226);
+            this.lblPrecio.Location = new System.Drawing.Point(88, 267);
             this.lblPrecio.Name = "lblPrecio";
-            this.lblPrecio.Size = new System.Drawing.Size(48, 16);
+            this.lblPrecio.Size = new System.Drawing.Size(56, 18);
             this.lblPrecio.TabIndex = 15;
             this.lblPrecio.Text = "Precio";
             // 
@@ -226,11 +196,11 @@ namespace UI
             // 
             this.lblImagenUrl.AutoSize = true;
             this.lblImagenUrl.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.lblImagenUrl.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblImagenUrl.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblImagenUrl.ForeColor = System.Drawing.Color.White;
-            this.lblImagenUrl.Location = new System.Drawing.Point(55, 195);
+            this.lblImagenUrl.Location = new System.Drawing.Point(88, 236);
             this.lblImagenUrl.Name = "lblImagenUrl";
-            this.lblImagenUrl.Size = new System.Drawing.Size(78, 16);
+            this.lblImagenUrl.Size = new System.Drawing.Size(88, 18);
             this.lblImagenUrl.TabIndex = 14;
             this.lblImagenUrl.Text = "Imagen Url";
             // 
@@ -238,23 +208,40 @@ namespace UI
             // 
             this.lblMarca.AutoSize = true;
             this.lblMarca.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.lblMarca.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMarca.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMarca.ForeColor = System.Drawing.Color.White;
-            this.lblMarca.Location = new System.Drawing.Point(55, 162);
+            this.lblMarca.Location = new System.Drawing.Point(88, 203);
             this.lblMarca.Name = "lblMarca";
-            this.lblMarca.Size = new System.Drawing.Size(51, 16);
+            this.lblMarca.Size = new System.Drawing.Size(58, 18);
             this.lblMarca.TabIndex = 13;
             this.lblMarca.Text = "Marca";
+            // 
+            // btnCerrar
+            // 
+            this.btnCerrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
+            this.btnCerrar.FlatAppearance.BorderSize = 0;
+            this.btnCerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Crimson;
+            this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCerrar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCerrar.ForeColor = System.Drawing.Color.White;
+            this.btnCerrar.Image = global::UI.Properties.Resources.ui_essential_cross_icon_192144;
+            this.btnCerrar.Location = new System.Drawing.Point(3, 4);
+            this.btnCerrar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnCerrar.Name = "btnCerrar";
+            this.btnCerrar.Size = new System.Drawing.Size(37, 37);
+            this.btnCerrar.TabIndex = 7;
+            this.btnCerrar.UseVisualStyleBackColor = false;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
             // lblCategoria
             // 
             this.lblCategoria.AutoSize = true;
             this.lblCategoria.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.lblCategoria.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCategoria.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCategoria.ForeColor = System.Drawing.Color.White;
-            this.lblCategoria.Location = new System.Drawing.Point(55, 129);
+            this.lblCategoria.Location = new System.Drawing.Point(88, 170);
             this.lblCategoria.Name = "lblCategoria";
-            this.lblCategoria.Size = new System.Drawing.Size(75, 16);
+            this.lblCategoria.Size = new System.Drawing.Size(83, 18);
             this.lblCategoria.TabIndex = 12;
             this.lblCategoria.Text = "Categoría";
             // 
@@ -262,11 +249,11 @@ namespace UI
             // 
             this.lblDescripcion.AutoSize = true;
             this.lblDescripcion.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.lblDescripcion.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDescripcion.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDescripcion.ForeColor = System.Drawing.Color.White;
-            this.lblDescripcion.Location = new System.Drawing.Point(55, 98);
+            this.lblDescripcion.Location = new System.Drawing.Point(88, 139);
             this.lblDescripcion.Name = "lblDescripcion";
-            this.lblDescripcion.Size = new System.Drawing.Size(83, 16);
+            this.lblDescripcion.Size = new System.Drawing.Size(97, 18);
             this.lblDescripcion.TabIndex = 11;
             this.lblDescripcion.Text = "Descripción";
             // 
@@ -274,11 +261,11 @@ namespace UI
             // 
             this.lblNombre.AutoSize = true;
             this.lblNombre.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.lblNombre.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombre.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombre.ForeColor = System.Drawing.Color.White;
-            this.lblNombre.Location = new System.Drawing.Point(55, 67);
+            this.lblNombre.Location = new System.Drawing.Point(88, 108);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(61, 16);
+            this.lblNombre.Size = new System.Drawing.Size(68, 18);
             this.lblNombre.TabIndex = 10;
             this.lblNombre.Text = "Nombre";
             // 
@@ -286,19 +273,30 @@ namespace UI
             // 
             this.lblCodigo.AutoSize = true;
             this.lblCodigo.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.lblCodigo.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCodigo.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCodigo.ForeColor = System.Drawing.Color.White;
-            this.lblCodigo.Location = new System.Drawing.Point(55, 35);
+            this.lblCodigo.Location = new System.Drawing.Point(88, 76);
             this.lblCodigo.Name = "lblCodigo";
-            this.lblCodigo.Size = new System.Drawing.Size(58, 16);
+            this.lblCodigo.Size = new System.Drawing.Size(64, 18);
             this.lblCodigo.TabIndex = 9;
             this.lblCodigo.Text = "Código";
+            // 
+            // pbxVistaPrevia
+            // 
+            this.pbxVistaPrevia.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pbxVistaPrevia.Location = new System.Drawing.Point(481, 92);
+            this.pbxVistaPrevia.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pbxVistaPrevia.Name = "pbxVistaPrevia";
+            this.pbxVistaPrevia.Size = new System.Drawing.Size(196, 194);
+            this.pbxVistaPrevia.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbxVistaPrevia.TabIndex = 17;
+            this.pbxVistaPrevia.TabStop = false;
             // 
             // frmAgregarModificar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(709, 321);
+            this.ClientSize = new System.Drawing.Size(699, 391);
             this.Controls.Add(this.panelPrincipal);
             this.Controls.Add(this.lblVistaPrevia);
             this.Controls.Add(this.pbxVistaPrevia);
@@ -309,9 +307,9 @@ namespace UI
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Agregar Artículos";
             this.Load += new System.EventHandler(this.frmAgregar_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pbxVistaPrevia)).EndInit();
             this.panelPrincipal.ResumeLayout(false);
             this.panelPrincipal.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxVistaPrevia)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
