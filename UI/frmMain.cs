@@ -45,8 +45,8 @@ namespace UI
             frmInterno.BringToFront();
             frmInterno.Show();
         }
-        private void cargarGrid()
-        {
+        public void cargarGrid()
+        {   
             ArticuloNegocio negocio = new ArticuloNegocio();
             try
             {
@@ -67,7 +67,7 @@ namespace UI
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            frmInterno(new frmAgregarModificar());
+            frmInterno(new frmAgregarModificar(this));
         }
         private void btnModificar_Click(object sender, EventArgs e)
         {

@@ -117,7 +117,7 @@ namespace UI
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pbxArticulos.BackColor = System.Drawing.Color.White;
-            this.pbxArticulos.Location = new System.Drawing.Point(94, 109);
+            this.pbxArticulos.Location = new System.Drawing.Point(94, 100);
             this.pbxArticulos.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pbxArticulos.Name = "pbxArticulos";
             this.pbxArticulos.Size = new System.Drawing.Size(349, 281);

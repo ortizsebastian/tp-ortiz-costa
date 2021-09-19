@@ -8,6 +8,7 @@ namespace UI
     public partial class frmAgregarModificar : Form
     {
         private Articulo articuloSeleccionado = null;
+        private frmMain main = null;
         public frmAgregarModificar()
         {
             InitializeComponent();
@@ -16,6 +17,11 @@ namespace UI
         {
             InitializeComponent();
             this.articuloSeleccionado = articuloSeleccionado;
+        }
+        public frmAgregarModificar(frmMain main)
+        {
+            InitializeComponent();
+            this.main = main;
         }
 
         private void frmAgregar_Load(object sender, EventArgs e)
@@ -84,7 +90,8 @@ namespace UI
                     {
                         negocio.agregar(articuloSeleccionado);
                         MessageBox.Show("Datos agregados correctamente.", "Datos agregados.", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        limpiar();
+                        Close();
+                        main.cargarGrid();
                     }
                 }
                 catch (Exception ex)
@@ -94,7 +101,6 @@ namespace UI
                 }
             }
         }
-
         private void cargarImagen(string imagen)
         {
             try
@@ -103,16 +109,8 @@ namespace UI
             }
             catch (Exception)
             {
-                pbxVistaPrevia.Load("https://www.salonlfc.com/wp-content/uploads/2018/01/image-not-found-scaled-1150x647.png");
+                pbxVistaPrevia.Load("https://i.postimg.cc/vZhbQS5T/Agregar-Modificar.png");
             }
         }
-        private void limpiar()
-                {
-                    txtCodigo.Clear();
-                    txtNombre.Clear();
-                    txtDescripcion.Clear();
-                    txtImagen.Clear();
-                    txtPrecio.Clear();
-                }
     }
 }
