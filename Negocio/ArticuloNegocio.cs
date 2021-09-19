@@ -122,18 +122,22 @@ namespace Negocio
                 while (datos.Lector.Read())
                 {
                     Articulo obj = new Articulo();
-                    obj.Id = (int)datos.Lector["Id"];
-                    obj.Codigo = (string)datos.Lector["Codigo"];
+                    obj.Id = (int)datos.Lector["ID"];
+                    obj.Codigo = (string)datos.Lector["Código"];
                     obj.Nombre = (string)datos.Lector["Nombre"];
-                    obj.Descripcion = (string)datos.Lector["Descripcion"];
+                    obj.Descripcion = (string)datos.Lector["Descripción"];
                     obj.Precio = (decimal)datos.Lector["Precio"];
 
+                    if (!(datos.Lector["ImagenUrl"] is DBNull))
+                        obj.ImagenUrl = (string)datos.Lector["ImagenUrl"];
                     obj.Categoria = new Categoria();
-                    if (!(datos.Lector["Categoria"] is DBNull))
-                        obj.Categoria.Descripcion = (string)datos.Lector["Categoria"];
+                    obj.Categoria.Id = (int)datos.Lector["IdCategoria"];
+                    if (!(datos.Lector["Categoría"] is DBNull))
+                        obj.Categoria.Descripcion = (string)datos.Lector["Categoría"];
                     else 
                         obj.Categoria.Descripcion = "Desconocida";
                     obj.Marca = new Marca();
+                    obj.Marca.Id = (int)datos.Lector["IdMarca"];
                     if (!(datos.Lector["Marca"] is DBNull))
                         obj.Marca.Descripcion = (string)datos.Lector["Marca"];
                     else
