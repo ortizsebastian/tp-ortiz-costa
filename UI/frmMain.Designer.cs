@@ -46,8 +46,7 @@ namespace UI
             this.btnCerrar = new System.Windows.Forms.Button();
             this.panelContenedor = new System.Windows.Forms.Panel();
             this.btnText = new System.Windows.Forms.Button();
-            this.panelLinea2 = new System.Windows.Forms.Panel();
-            this.panelLinea1 = new System.Windows.Forms.Panel();
+            this.panelLinea = new System.Windows.Forms.Panel();
             this.dgvArticulos = new System.Windows.Forms.DataGridView();
             this.panelInferior = new System.Windows.Forms.Panel();
             this.panelLateral.SuspendLayout();
@@ -218,8 +217,7 @@ namespace UI
             this.panelContenedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.panelContenedor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panelContenedor.Controls.Add(this.btnText);
-            this.panelContenedor.Controls.Add(this.panelLinea2);
-            this.panelContenedor.Controls.Add(this.panelLinea1);
+            this.panelContenedor.Controls.Add(this.panelLinea);
             this.panelContenedor.Controls.Add(this.dgvArticulos);
             this.panelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelContenedor.ForeColor = System.Drawing.Color.White;
@@ -235,27 +233,19 @@ namespace UI
             this.btnText.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnText.ForeColor = System.Drawing.Color.Black;
             this.btnText.Image = global::UI.Properties.Resources.Lista_de_Artículos;
-            this.btnText.Location = new System.Drawing.Point(48, 12);
+            this.btnText.Location = new System.Drawing.Point(48, 4);
             this.btnText.Name = "btnText";
-            this.btnText.Size = new System.Drawing.Size(609, 72);
+            this.btnText.Size = new System.Drawing.Size(609, 83);
             this.btnText.TabIndex = 16;
             this.btnText.UseVisualStyleBackColor = true;
             // 
-            // panelLinea2
+            // panelLinea
             // 
-            this.panelLinea2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
-            this.panelLinea2.Location = new System.Drawing.Point(44, 94);
-            this.panelLinea2.Name = "panelLinea2";
-            this.panelLinea2.Size = new System.Drawing.Size(609, 1);
-            this.panelLinea2.TabIndex = 15;
-            // 
-            // panelLinea1
-            // 
-            this.panelLinea1.BackColor = System.Drawing.Color.White;
-            this.panelLinea1.Location = new System.Drawing.Point(44, 90);
-            this.panelLinea1.Name = "panelLinea1";
-            this.panelLinea1.Size = new System.Drawing.Size(609, 1);
-            this.panelLinea1.TabIndex = 14;
+            this.panelLinea.BackColor = System.Drawing.Color.White;
+            this.panelLinea.Location = new System.Drawing.Point(44, 90);
+            this.panelLinea.Name = "panelLinea";
+            this.panelLinea.Size = new System.Drawing.Size(609, 1);
+            this.panelLinea.TabIndex = 14;
             // 
             // dgvArticulos
             // 
@@ -373,8 +363,7 @@ namespace UI
         private System.Windows.Forms.Panel panelContenedor;
         private System.Windows.Forms.Button btnCerrar;
         private System.Windows.Forms.DataGridView dgvArticulos;
-        private System.Windows.Forms.Panel panelLinea1;
-        private System.Windows.Forms.Panel panelLinea2;
+        private System.Windows.Forms.Panel panelLinea;
         private System.Windows.Forms.Button btnText;
         private System.Windows.Forms.Panel panelInferior;
     }

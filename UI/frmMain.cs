@@ -45,13 +45,13 @@ namespace UI
             try
             {
                 ListaArticulos = negocio.listar();
-                dgvArticulos.BringToFront();
                 dgvArticulos.DataSource = ListaArticulos;
                 dgvArticulos.Columns["ID"].Visible = false;
                 dgvArticulos.Columns["ImagenUrl"].Visible = false;
                 dgvArticulos.Columns["Categoria"].Visible = false;
                 dgvArticulos.Columns["Marca"].Visible = false;
                 dgvArticulos.Columns["Descripcion"].Visible = false;
+                dgvArticulos.ClearSelection();
             }
             catch (Exception ex)
             {
@@ -87,6 +87,10 @@ namespace UI
                 Articulo ArticuloSeleccionado = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
                 frmInterno(new frmAgregarModificar(ArticuloSeleccionado));
             }
+            else
+            {
+                MessageBox.Show("Debe seleccionar un artículo de la lista.");
+            }
         }
         private void btnEliminar_Click(object sender, EventArgs e)
         {
@@ -102,6 +106,10 @@ namespace UI
                     cargarGrid();
                 }
             }
+            else
+            {
+                MessageBox.Show("Debe seleccionar un artículo de la lista.");
+            }
         }
         private void btnBuscar_Click(object sender, EventArgs e)
         {
@@ -113,6 +121,10 @@ namespace UI
             {
                 Articulo ArticuloSeleccionado = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
                 frmInterno(new frmVerDetalle(ArticuloSeleccionado));
+            }
+            else
+            {
+                MessageBox.Show("Debe seleccionar un artículo de la lista.");
             }
         }
 
