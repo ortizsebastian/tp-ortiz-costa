@@ -17,6 +17,8 @@ namespace UI
             InitializeComponent();
         }
 
+
+
         private void btnCerrar_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -30,6 +32,9 @@ namespace UI
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
+
+
+
 
         private Form frmActivo = null;
         private void frmInterno(Form frmInterno)
@@ -64,6 +69,9 @@ namespace UI
                 MessageBox.Show(ex.ToString());
             }
         }
+
+
+
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
@@ -116,7 +124,6 @@ namespace UI
                 MessageBox.Show("Debe seleccionar un artículo de la lista.","Ver detalle");
             }
         }
-
         private void dgvArticulos_SelectionChanged(object sender, EventArgs e)
         {
             ArticuloSeleccionado = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
