@@ -11,7 +11,7 @@ namespace UI
     public partial class frmMain : Form
     {
         private List<Articulo> ListaArticulos;
-        private Articulo ArticuloSeleccionado = null;
+        private Articulo articuloSeleccionado = null;
         public frmMain()
         {
             InitializeComponent();
@@ -73,8 +73,8 @@ namespace UI
         {
             if (dgvArticulos.CurrentRow != null)
             {
-                Articulo ArticuloSeleccionado = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
-                frmInterno(new frmAgregarModificar(ArticuloSeleccionado));
+                Articulo articuloSeleccionado = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
+                frmInterno(new frmAgregarModificar(articuloSeleccionado));
             }
             else
             {
@@ -90,8 +90,8 @@ namespace UI
                     MessageBox.Show("Artículo eliminado correctamente.");
 
                     ArticuloNegocio obj = new ArticuloNegocio();
-                    Articulo ArticuloSeleccionado = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
-                    obj.eliminar(ArticuloSeleccionado);
+                    Articulo articuloSeleccionado = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
+                    obj.eliminar(articuloSeleccionado);
                     cargarGrid();
                 }
             }
@@ -108,8 +108,8 @@ namespace UI
         {
             if (dgvArticulos.CurrentRow != null)
             {
-                Articulo ArticuloSeleccionado = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
-                frmInterno(new frmVerDetalle(ArticuloSeleccionado));
+                Articulo articuloSeleccionado = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
+                frmInterno(new frmVerDetalle(articuloSeleccionado));
             }
             else
             {
@@ -118,7 +118,7 @@ namespace UI
         }
         private void dgvArticulos_SelectionChanged(object sender, EventArgs e)
         {
-            ArticuloSeleccionado = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
+            articuloSeleccionado = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
         }
         private void frmMain_Load(object sender, EventArgs e)
         {

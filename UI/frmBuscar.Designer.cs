@@ -108,7 +108,7 @@ namespace UI
             this.dgvBuscar.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvBuscar.EnableHeadersVisualStyles = false;
             this.dgvBuscar.GridColor = System.Drawing.Color.DimGray;
-            this.dgvBuscar.Location = new System.Drawing.Point(14, 125);
+            this.dgvBuscar.Location = new System.Drawing.Point(15, 125);
             this.dgvBuscar.Name = "dgvBuscar";
             this.dgvBuscar.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -127,7 +127,7 @@ namespace UI
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
             this.dgvBuscar.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvBuscar.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.dgvBuscar.Size = new System.Drawing.Size(667, 127);
+            this.dgvBuscar.Size = new System.Drawing.Size(668, 127);
             this.dgvBuscar.TabIndex = 41;
             // 
             // lblCodigo

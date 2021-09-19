@@ -78,28 +78,14 @@ namespace Negocio
             try
             {
                 datos.setConsulta("UPDATE ARTICULOS set Codigo = '" + modificarArticulo.Codigo + "', Nombre = '" + modificarArticulo.Nombre + "', " +
-                    "Descripcion = '" + modificarArticulo.Descripcion + "', IdCategoria = '" + modificarArticulo.Categoria.Id + "', " +
-                    "IdMarca = '" + modificarArticulo.Marca.Id + "', ImagenUrl = '" + modificarArticulo.ImagenUrl + "', Precio = '" + modificarArticulo.Precio + "' " +
-                    "where Id = '" + modificarArticulo.Id + "'");
-          
-                /*
-                datos.setConsulta("UPDATE ARTICULOS set Codigo = @codigo, Nombre = @nombre, Descripcion = @desc, IdCategoria = @idcategoria, IdMarca = @idmarca, ImagenUrl = @img, Precio = @precio where Id = @id");
-           
-                datos.setearParametro("@codigo", modificarArticulo.Codigo);
-                datos.setearParametro("@nombre", modificarArticulo.Nombre);
-                datos.setearParametro("@desc", modificarArticulo.Descripcion);
-                datos.setearParametro("@categoria", modificarArticulo.Categoria.Id);
-                datos.setearParametro("@marca", modificarArticulo.Marca.Id); 
-                datos.setearParametro("@img", modificarArticulo.ImagenUrl);
-                datos.setearParametro("@precio", modificarArticulo.Precio);
-                datos.setearParametro("@id", modificarArticulo.Id);
-                */
+                "Descripcion = '" + modificarArticulo.Descripcion + "', IdCategoria = '" + modificarArticulo.Categoria.Id + "', " +
+                "IdMarca = '" + modificarArticulo.Marca.Id + "', ImagenUrl = '" + modificarArticulo.ImagenUrl + "', Precio = '" + modificarArticulo.Precio + "' " +
+                "where Id = '" + modificarArticulo.Id + "'");
 
                 datos.ejecutarAccion();
             }
             catch (Exception ex)
             {
-
                 throw ex;
             }
             finally
@@ -117,7 +103,6 @@ namespace Negocio
             }
             catch (Exception ex)
             {
-
                 throw ex;
             }
             finally
@@ -137,21 +122,18 @@ namespace Negocio
                 while (datos.Lector.Read())
                 {
                     Articulo obj = new Articulo();
-                    obj.Id = (int)datos.Lector["ID"];
-                    obj.Codigo = (string)datos.Lector["Código"];
+                    obj.Id = (int)datos.Lector["Id"];
+                    obj.Codigo = (string)datos.Lector["Codigo"];
                     obj.Nombre = (string)datos.Lector["Nombre"];
-                    obj.Descripcion = (string)datos.Lector["Descripción"];
+                    obj.Descripcion = (string)datos.Lector["Descripcion"];
                     obj.Precio = (decimal)datos.Lector["Precio"];
 
-                    if (!(datos.Lector["ImagenUrl"] is DBNull))
-                        obj.ImagenUrl = (string)datos.Lector["ImagenUrl"];
                     obj.Categoria = new Categoria();
-                    obj.Categoria.Id = (int)datos.Lector["IdCategoria"];
-                    if (!(datos.Lector["Categoría"] is DBNull))
-                        obj.Categoria.Descripcion = (string)datos.Lector["Categoría"];
-                    else obj.Categoria.Descripcion = "Desconocida";
+                    if (!(datos.Lector["Categoria"] is DBNull))
+                        obj.Categoria.Descripcion = (string)datos.Lector["Categoria"];
+                    else 
+                        obj.Categoria.Descripcion = "Desconocida";
                     obj.Marca = new Marca();
-                    obj.Marca.Id = (int)datos.Lector["IdMarca"];
                     if (!(datos.Lector["Marca"] is DBNull))
                         obj.Marca.Descripcion = (string)datos.Lector["Marca"];
                     else

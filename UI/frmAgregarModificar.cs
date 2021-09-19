@@ -20,15 +20,15 @@ namespace UI
 
         private void frmAgregar_Load(object sender, EventArgs e)
         {
-            CategoriaNegocio catNegocio = new CategoriaNegocio();
-            MarcaNegocio marNegocio = new MarcaNegocio();
+            CategoriaNegocio categoria = new CategoriaNegocio();
+            MarcaNegocio marca = new MarcaNegocio();
 
             try
             {
-                cboCategoria.DataSource = catNegocio.listar();
+                cboCategoria.DataSource = categoria.listar();
                 cboCategoria.ValueMember = "Id";
                 cboCategoria.DisplayMember = "Descripcion";
-                cboMarca.DataSource = marNegocio.listar();
+                cboMarca.DataSource = marca.listar();
                 cboMarca.ValueMember = "Id";
                 cboMarca.DisplayMember = "Descripcion";
 
@@ -70,7 +70,7 @@ namespace UI
                     articuloSeleccionado.Nombre = txtNombre.Text;
                     articuloSeleccionado.Descripcion = txtDescripcion.Text;
                     articuloSeleccionado.ImagenUrl = txtImagen.Text;
-                    articuloSeleccionado.Precio = int.Parse(txtPrecio.Text);
+                    articuloSeleccionado.Precio = decimal.Parse(txtPrecio.Text);
                     articuloSeleccionado.Marca = (Marca)cboMarca.SelectedItem;
                     articuloSeleccionado.Categoria = (Categoria)cboCategoria.SelectedItem;
 

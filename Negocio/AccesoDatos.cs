@@ -10,6 +10,7 @@ namespace Negocio
     public class AccesoDatos
     {
         private SqlConnection Conexion;
+
         private SqlCommand Comando;
         public SqlDataReader Lector { get; set; }
         public AccesoDatos()
@@ -46,7 +47,6 @@ namespace Negocio
             }
             catch (Exception ex)
             {
-
                 throw ex;
             }
         }
