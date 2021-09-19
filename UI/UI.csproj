@@ -87,6 +87,7 @@
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -135,10 +136,10 @@
     <None Include="Resources\ui_essential_settings_icon_192199.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Lista de Artículos.png" />
+    <None Include="Resources\coollogo_com-18425454.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\image-from-rawpixel-id-2335588-original.png" />
+    <None Include="Resources\coollogo_com-7531763.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

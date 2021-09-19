@@ -63,9 +63,9 @@ namespace UI.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap image_from_rawpixel_id_2335588_original {
+        internal static System.Drawing.Bitmap coollogo_com_18425454 {
             get {
-                object obj = ResourceManager.GetObject("image-from-rawpixel-id-2335588-original", resourceCulture);
+                object obj = ResourceManager.GetObject("coollogo_com-18425454", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -73,9 +73,9 @@ namespace UI.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Lista_de_Artículos {
+        internal static System.Drawing.Bitmap coollogo_com_7531763 {
             get {
-                object obj = ResourceManager.GetObject("Lista de Artículos", resourceCulture);
+                object obj = ResourceManager.GetObject("coollogo_com-7531763", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
