@@ -134,5 +134,8 @@
   <ItemGroup>
     <None Include="Resources\ui_essential_settings_icon_192199.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Lista de Artículos.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

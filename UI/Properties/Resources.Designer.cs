@@ -63,6 +63,16 @@ namespace UI.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Lista_de_Artículos {
+            get {
+                object obj = ResourceManager.GetObject("Lista de Artículos", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ui_essential_cross_icon_192144 {
             get {
                 object obj = ResourceManager.GetObject("ui_essential_cross_icon_192144", resourceCulture);
