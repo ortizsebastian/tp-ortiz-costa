@@ -90,7 +90,7 @@ namespace UI
             // 
             // btnVerDetalle
             // 
-            this.btnVerDetalle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
+            this.btnVerDetalle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(29)))), ((int)(((byte)(36)))));
             this.btnVerDetalle.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnVerDetalle.FlatAppearance.BorderSize = 0;
             this.btnVerDetalle.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(142)))), ((int)(((byte)(186)))));
@@ -99,11 +99,11 @@ namespace UI
             this.btnVerDetalle.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.btnVerDetalle.Image = global::UI.Properties.Resources.ui_essential_filter_options_icon_192093;
             this.btnVerDetalle.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnVerDetalle.Location = new System.Drawing.Point(0, 345);
+            this.btnVerDetalle.Location = new System.Drawing.Point(1, 345);
             this.btnVerDetalle.Margin = new System.Windows.Forms.Padding(3, 3, 3, 5);
             this.btnVerDetalle.Name = "btnVerDetalle";
             this.btnVerDetalle.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.btnVerDetalle.Size = new System.Drawing.Size(223, 40);
+            this.btnVerDetalle.Size = new System.Drawing.Size(222, 40);
             this.btnVerDetalle.TabIndex = 4;
             this.btnVerDetalle.Text = "Ver detalle";
             this.btnVerDetalle.UseVisualStyleBackColor = false;
@@ -111,7 +111,7 @@ namespace UI
             // 
             // btnBuscar
             // 
-            this.btnBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
+            this.btnBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(29)))), ((int)(((byte)(36)))));
             this.btnBuscar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnBuscar.FlatAppearance.BorderSize = 0;
             this.btnBuscar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(142)))), ((int)(((byte)(186)))));
@@ -120,11 +120,11 @@ namespace UI
             this.btnBuscar.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.btnBuscar.Image = global::UI.Properties.Resources.ui_essential_magnifier_search_icon_192119;
             this.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBuscar.Location = new System.Drawing.Point(0, 297);
+            this.btnBuscar.Location = new System.Drawing.Point(1, 297);
             this.btnBuscar.Margin = new System.Windows.Forms.Padding(3, 3, 3, 5);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.btnBuscar.Size = new System.Drawing.Size(223, 40);
+            this.btnBuscar.Size = new System.Drawing.Size(222, 40);
             this.btnBuscar.TabIndex = 3;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = false;
@@ -132,7 +132,7 @@ namespace UI
             // 
             // btnEliminar
             // 
-            this.btnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
+            this.btnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(29)))), ((int)(((byte)(36)))));
             this.btnEliminar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEliminar.FlatAppearance.BorderSize = 0;
             this.btnEliminar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(142)))), ((int)(((byte)(186)))));
@@ -141,11 +141,11 @@ namespace UI
             this.btnEliminar.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.btnEliminar.Image = global::UI.Properties.Resources.ui_essential_delete_junk_icon_192143;
             this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEliminar.Location = new System.Drawing.Point(0, 249);
+            this.btnEliminar.Location = new System.Drawing.Point(1, 249);
             this.btnEliminar.Margin = new System.Windows.Forms.Padding(3, 3, 3, 5);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.btnEliminar.Size = new System.Drawing.Size(223, 40);
+            this.btnEliminar.Size = new System.Drawing.Size(222, 40);
             this.btnEliminar.TabIndex = 2;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = false;
@@ -153,7 +153,7 @@ namespace UI
             // 
             // btnModificar
             // 
-            this.btnModificar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
+            this.btnModificar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(29)))), ((int)(((byte)(36)))));
             this.btnModificar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnModificar.FlatAppearance.BorderSize = 0;
             this.btnModificar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(142)))), ((int)(((byte)(186)))));
@@ -162,11 +162,11 @@ namespace UI
             this.btnModificar.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.btnModificar.Image = global::UI.Properties.Resources.ui_essential_settings_icon_192199;
             this.btnModificar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnModificar.Location = new System.Drawing.Point(0, 201);
+            this.btnModificar.Location = new System.Drawing.Point(1, 201);
             this.btnModificar.Margin = new System.Windows.Forms.Padding(3, 3, 3, 5);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.btnModificar.Size = new System.Drawing.Size(223, 40);
+            this.btnModificar.Size = new System.Drawing.Size(222, 40);
             this.btnModificar.TabIndex = 1;
             this.btnModificar.Text = "Modificar";
             this.btnModificar.UseVisualStyleBackColor = false;
@@ -174,7 +174,7 @@ namespace UI
             // 
             // btnAgregar
             // 
-            this.btnAgregar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
+            this.btnAgregar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(29)))), ((int)(((byte)(36)))));
             this.btnAgregar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAgregar.FlatAppearance.BorderSize = 0;
             this.btnAgregar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(142)))), ((int)(((byte)(186)))));
@@ -183,11 +183,11 @@ namespace UI
             this.btnAgregar.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.btnAgregar.Image = global::UI.Properties.Resources.ui_essential_folder_upload_icon_192098;
             this.btnAgregar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAgregar.Location = new System.Drawing.Point(0, 153);
+            this.btnAgregar.Location = new System.Drawing.Point(1, 153);
             this.btnAgregar.Margin = new System.Windows.Forms.Padding(3, 3, 3, 5);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.btnAgregar.Size = new System.Drawing.Size(223, 40);
+            this.btnAgregar.Size = new System.Drawing.Size(222, 40);
             this.btnAgregar.TabIndex = 0;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = false;
@@ -276,7 +276,7 @@ namespace UI
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(22)))), ((int)(((byte)(41)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(142)))), ((int)(((byte)(186)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(22)))), ((int)(((byte)(41)))));
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
             this.dgvArticulos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvArticulos.ColumnHeadersHeight = 35;

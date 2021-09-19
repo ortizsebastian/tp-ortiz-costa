@@ -189,9 +189,9 @@ namespace UI
             this.lblPrecio.ForeColor = System.Drawing.Color.White;
             this.lblPrecio.Location = new System.Drawing.Point(88, 267);
             this.lblPrecio.Name = "lblPrecio";
-            this.lblPrecio.Size = new System.Drawing.Size(56, 18);
+            this.lblPrecio.Size = new System.Drawing.Size(60, 18);
             this.lblPrecio.TabIndex = 15;
-            this.lblPrecio.Text = "Precio";
+            this.lblPrecio.Text = "Precio:";
             // 
             // lblImagenUrl
             // 
@@ -201,9 +201,9 @@ namespace UI
             this.lblImagenUrl.ForeColor = System.Drawing.Color.White;
             this.lblImagenUrl.Location = new System.Drawing.Point(88, 236);
             this.lblImagenUrl.Name = "lblImagenUrl";
-            this.lblImagenUrl.Size = new System.Drawing.Size(88, 18);
+            this.lblImagenUrl.Size = new System.Drawing.Size(92, 18);
             this.lblImagenUrl.TabIndex = 14;
-            this.lblImagenUrl.Text = "Imagen Url";
+            this.lblImagenUrl.Text = "Imagen Url:";
             // 
             // lblMarca
             // 
@@ -213,9 +213,9 @@ namespace UI
             this.lblMarca.ForeColor = System.Drawing.Color.White;
             this.lblMarca.Location = new System.Drawing.Point(88, 203);
             this.lblMarca.Name = "lblMarca";
-            this.lblMarca.Size = new System.Drawing.Size(58, 18);
+            this.lblMarca.Size = new System.Drawing.Size(62, 18);
             this.lblMarca.TabIndex = 13;
-            this.lblMarca.Text = "Marca";
+            this.lblMarca.Text = "Marca:";
             // 
             // btnCerrar
             // 
@@ -243,9 +243,9 @@ namespace UI
             this.lblCategoria.ForeColor = System.Drawing.Color.White;
             this.lblCategoria.Location = new System.Drawing.Point(88, 170);
             this.lblCategoria.Name = "lblCategoria";
-            this.lblCategoria.Size = new System.Drawing.Size(83, 18);
+            this.lblCategoria.Size = new System.Drawing.Size(87, 18);
             this.lblCategoria.TabIndex = 12;
-            this.lblCategoria.Text = "Categoría";
+            this.lblCategoria.Text = "Categoría:";
             // 
             // lblDescripcion
             // 
@@ -255,9 +255,9 @@ namespace UI
             this.lblDescripcion.ForeColor = System.Drawing.Color.White;
             this.lblDescripcion.Location = new System.Drawing.Point(88, 139);
             this.lblDescripcion.Name = "lblDescripcion";
-            this.lblDescripcion.Size = new System.Drawing.Size(97, 18);
+            this.lblDescripcion.Size = new System.Drawing.Size(101, 18);
             this.lblDescripcion.TabIndex = 11;
-            this.lblDescripcion.Text = "Descripción";
+            this.lblDescripcion.Text = "Descripción:";
             // 
             // lblNombre
             // 
@@ -267,9 +267,9 @@ namespace UI
             this.lblNombre.ForeColor = System.Drawing.Color.White;
             this.lblNombre.Location = new System.Drawing.Point(88, 108);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(68, 18);
+            this.lblNombre.Size = new System.Drawing.Size(72, 18);
             this.lblNombre.TabIndex = 10;
-            this.lblNombre.Text = "Nombre";
+            this.lblNombre.Text = "Nombre:";
             // 
             // lblCodigo
             // 
@@ -279,9 +279,9 @@ namespace UI
             this.lblCodigo.ForeColor = System.Drawing.Color.White;
             this.lblCodigo.Location = new System.Drawing.Point(88, 76);
             this.lblCodigo.Name = "lblCodigo";
-            this.lblCodigo.Size = new System.Drawing.Size(64, 18);
+            this.lblCodigo.Size = new System.Drawing.Size(68, 18);
             this.lblCodigo.TabIndex = 9;
-            this.lblCodigo.Text = "Código";
+            this.lblCodigo.Text = "Código:";
             // 
             // pbxVistaPrevia
             // 
