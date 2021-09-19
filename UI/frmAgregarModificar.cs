@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Dominio;
 using Negocio;
 using System.Windows.Forms;
@@ -60,25 +53,6 @@ namespace UI
         {
             cargarImagen(txtImagen.Text);
         }
-        private void cargarImagen(string imagen)
-        {
-            try
-            {
-                pbxVistaPrevia.Load(imagen);
-            }
-            catch (Exception)
-            {
-                pbxVistaPrevia.Load("https://www.salonlfc.com/wp-content/uploads/2018/01/image-not-found-scaled-1150x647.png");
-            }
-        }
-        private void limpiar()
-                {
-                    txtCodigo.Clear();
-                    txtNombre.Clear();
-                    txtDescripcion.Clear();
-                    txtImagen.Clear();
-                    txtPrecio.Clear();
-                }
         private void btnCerrar_Click(object sender, EventArgs e)
         {
             Close();
@@ -120,5 +94,25 @@ namespace UI
                 }
             }
         }
+
+        private void cargarImagen(string imagen)
+        {
+            try
+            {
+                pbxVistaPrevia.Load(imagen);
+            }
+            catch (Exception)
+            {
+                pbxVistaPrevia.Load("https://www.salonlfc.com/wp-content/uploads/2018/01/image-not-found-scaled-1150x647.png");
+            }
+        }
+        private void limpiar()
+                {
+                    txtCodigo.Clear();
+                    txtNombre.Clear();
+                    txtDescripcion.Clear();
+                    txtImagen.Clear();
+                    txtPrecio.Clear();
+                }
     }
 }

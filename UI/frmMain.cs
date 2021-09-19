@@ -1,11 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 using Dominio;
@@ -17,13 +11,12 @@ namespace UI
     public partial class frmMain : Form
     {
         private List<Articulo> ListaArticulos;
-        private Articulo ArticuloSeleccionado;
+        private Articulo ArticuloSeleccionado = null;
         public frmMain()
         {
             InitializeComponent();
         }
 
-        //Panel
         private void btnCerrar_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -38,7 +31,20 @@ namespace UI
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
 
-        //Metodos Custom
+        private Form frmActivo = null;
+        private void frmInterno(Form frmInterno)
+        {
+            if (frmActivo != null)
+                frmActivo.Close();
+            frmActivo = frmInterno;
+            frmInterno.TopLevel = false;
+            frmInterno.FormBorderStyle = FormBorderStyle.None;
+            frmInterno.Dock = DockStyle.Fill;
+            panelContenedor.Controls.Add(frmInterno);
+            panelContenedor.Tag = frmInterno;
+            frmInterno.BringToFront();
+            frmInterno.Show();
+        }
         private void cargarGrid()
         {
             ArticuloNegocio negocio = new ArticuloNegocio();
@@ -59,23 +65,6 @@ namespace UI
             }
         }
 
-
-        private Form frmActivo = null;
-        private void frmInterno(Form frmInterno)
-        {
-            if (frmActivo != null)
-                frmActivo.Close();
-            frmActivo = frmInterno;
-            frmInterno.TopLevel = false;
-            frmInterno.FormBorderStyle = FormBorderStyle.None;
-            frmInterno.Dock = DockStyle.Fill;
-            panelContenedor.Controls.Add(frmInterno);
-            panelContenedor.Tag = frmInterno;
-            frmInterno.BringToFront();
-            frmInterno.Show();
-        }
-
-        //Botones del Menu Principal
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             frmInterno(new frmAgregarModificar());
@@ -89,7 +78,7 @@ namespace UI
             }
             else
             {
-                MessageBox.Show("Debe seleccionar un artículo de la lista.");
+                MessageBox.Show("Debe seleccionar un artículo de la lista.","Modificar");
             }
         }
         private void btnEliminar_Click(object sender, EventArgs e)
@@ -108,7 +97,7 @@ namespace UI
             }
             else
             {
-                MessageBox.Show("Debe seleccionar un artículo de la lista.");
+                MessageBox.Show("Debe seleccionar un artículo de la lista.","Eliminar");
             }
         }
         private void btnBuscar_Click(object sender, EventArgs e)
@@ -124,11 +113,10 @@ namespace UI
             }
             else
             {
-                MessageBox.Show("Debe seleccionar un artículo de la lista.");
+                MessageBox.Show("Debe seleccionar un artículo de la lista.","Ver detalle");
             }
         }
 
-        //Eventos de Carga
         private void dgvArticulos_SelectionChanged(object sender, EventArgs e)
         {
             ArticuloSeleccionado = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
