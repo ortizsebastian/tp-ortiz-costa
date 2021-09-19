@@ -17,8 +17,6 @@ namespace UI
             InitializeComponent();
         }
 
-
-
         private void btnCerrar_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -32,9 +30,6 @@ namespace UI
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
-
-
-
 
         private Form frmActivo = null;
         private void frmInterno(Form frmInterno)
@@ -69,9 +64,6 @@ namespace UI
                 MessageBox.Show(ex.ToString());
             }
         }
-
-
-
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {

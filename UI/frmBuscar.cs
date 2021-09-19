@@ -23,12 +23,18 @@ namespace UI
 
             try
             {
-                obj.Id = int.Parse(txtId.Text);
+                if(txtId.Text != "")
+                {
+                    obj.Id = int.Parse(txtId.Text);
+                }
                 obj.Nombre = txtNombre.Text;
                 obj.Codigo = txtCodigo.Text;
 
-                dgvBuscar.DataSource = aux.buscar(obj); 
-                dgvBuscar.Columns["ImagenUrl"].Visible = false;
+                dgvBuscar.DataSource = aux.buscar(obj);
+                if (dgvBuscar.Rows.Count == 0)
+                    dgvBuscar.Columns.Clear();
+                else
+                    dgvBuscar.Columns["ImagenUrl"].Visible = false;
             }
             catch (Exception ex)
             {
