@@ -44,12 +44,12 @@ namespace UI
             this.btnAgregar = new System.Windows.Forms.Button();
             this.panelSuperior = new System.Windows.Forms.Panel();
             this.btnCerrar = new System.Windows.Forms.Button();
-            this.panelInferior = new System.Windows.Forms.Panel();
             this.panelContenedor = new System.Windows.Forms.Panel();
             this.btnText = new System.Windows.Forms.Button();
             this.panelLinea2 = new System.Windows.Forms.Panel();
             this.panelLinea1 = new System.Windows.Forms.Panel();
             this.dgvArticulos = new System.Windows.Forms.DataGridView();
+            this.panelInferior = new System.Windows.Forms.Panel();
             this.panelLateral.SuspendLayout();
             this.panelSuperior.SuspendLayout();
             this.panelContenedor.SuspendLayout();
@@ -213,15 +213,6 @@ namespace UI
             this.btnCerrar.UseVisualStyleBackColor = true;
             this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
-            // panelInferior
-            // 
-            this.panelInferior.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(22)))), ((int)(((byte)(31)))));
-            this.panelInferior.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelInferior.Location = new System.Drawing.Point(223, 466);
-            this.panelInferior.Name = "panelInferior";
-            this.panelInferior.Size = new System.Drawing.Size(699, 60);
-            this.panelInferior.TabIndex = 10;
-            // 
             // panelContenedor
             // 
             this.panelContenedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
@@ -244,7 +235,7 @@ namespace UI
             this.btnText.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnText.ForeColor = System.Drawing.Color.Black;
             this.btnText.Image = global::UI.Properties.Resources.Lista_de_Artículos;
-            this.btnText.Location = new System.Drawing.Point(44, 12);
+            this.btnText.Location = new System.Drawing.Point(48, 12);
             this.btnText.Name = "btnText";
             this.btnText.Size = new System.Drawing.Size(609, 72);
             this.btnText.TabIndex = 16;
@@ -302,7 +293,7 @@ namespace UI
             this.dgvArticulos.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dgvArticulos.EnableHeadersVisualStyles = false;
             this.dgvArticulos.GridColor = System.Drawing.Color.White;
-            this.dgvArticulos.Location = new System.Drawing.Point(40, 127);
+            this.dgvArticulos.Location = new System.Drawing.Point(41, 107);
             this.dgvArticulos.MultiSelect = false;
             this.dgvArticulos.Name = "dgvArticulos";
             this.dgvArticulos.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -327,6 +318,15 @@ namespace UI
             this.dgvArticulos.ShowRowErrors = false;
             this.dgvArticulos.Size = new System.Drawing.Size(620, 229);
             this.dgvArticulos.TabIndex = 13;
+            // 
+            // panelInferior
+            // 
+            this.panelInferior.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(22)))), ((int)(((byte)(31)))));
+            this.panelInferior.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panelInferior.Location = new System.Drawing.Point(223, 466);
+            this.panelInferior.Name = "panelInferior";
+            this.panelInferior.Size = new System.Drawing.Size(699, 60);
+            this.panelInferior.TabIndex = 10;
             // 
             // frmMain
             // 
@@ -370,13 +370,13 @@ namespace UI
         private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Panel panelSuperior;
-        private System.Windows.Forms.Panel panelInferior;
         private System.Windows.Forms.Panel panelContenedor;
         private System.Windows.Forms.Button btnCerrar;
         private System.Windows.Forms.DataGridView dgvArticulos;
         private System.Windows.Forms.Panel panelLinea1;
         private System.Windows.Forms.Panel panelLinea2;
         private System.Windows.Forms.Button btnText;
+        private System.Windows.Forms.Panel panelInferior;
     }
 }
 

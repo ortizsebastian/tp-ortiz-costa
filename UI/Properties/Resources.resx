@@ -124,19 +124,19 @@
   <data name="ui_essential_filter_options_icon_192093" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ui_essential_filter_options_icon_192093.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ui_essential_delete_junk_icon_192143" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ui_essential_delete_junk_icon_192143.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ui_essential_settings_icon_192199" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ui_essential_settings_icon_192199.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ui_essential_magnifier_search_icon_192119" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ui_essential_magnifier_search_icon_192119.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ui_essential_settings_icon_192199" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ui_essential_settings_icon_192199.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Lista de Artículos" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Lista de Artículos.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ui_essential_delete_junk_icon_192143" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ui_essential_delete_junk_icon_192143.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ui_essential_folder_upload_icon_192098" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ui_essential_folder_upload_icon_192098.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Lista de Artículos" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Lista de Artículos.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

@@ -45,6 +45,7 @@ namespace UI
             try
             {
                 ListaArticulos = negocio.listar();
+                dgvArticulos.BringToFront();
                 dgvArticulos.DataSource = ListaArticulos;
                 dgvArticulos.Columns["ID"].Visible = false;
                 dgvArticulos.Columns["ImagenUrl"].Visible = false;
@@ -89,7 +90,18 @@ namespace UI
         }
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            
+            if (dgvArticulos.CurrentRow != null)
+            {
+                if (MessageBox.Show("¿Desea eliminar el artículo seleccionado?", "Eliminar", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                {
+                    MessageBox.Show("Artículo eliminado correctamente.");
+
+                    ArticuloNegocio obj = new ArticuloNegocio();
+                    Articulo ArticuloSeleccionado = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
+                    obj.eliminar(ArticuloSeleccionado);
+                    cargarGrid();
+                }
+            }
         }
         private void btnBuscar_Click(object sender, EventArgs e)
         {
