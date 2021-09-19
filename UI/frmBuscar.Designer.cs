@@ -37,13 +37,14 @@ namespace UI
             // btnCerrar
             // 
             this.btnCerrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
+            this.btnCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCerrar.FlatAppearance.BorderSize = 0;
             this.btnCerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Crimson;
             this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCerrar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCerrar.ForeColor = System.Drawing.Color.White;
             this.btnCerrar.Image = global::UI.Properties.Resources.ui_essential_cross_icon_192144;
-            this.btnCerrar.Location = new System.Drawing.Point(3, 4);
+            this.btnCerrar.Location = new System.Drawing.Point(0, -1);
             this.btnCerrar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(37, 37);
@@ -59,7 +60,7 @@ namespace UI
             this.panelPrincipal.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelPrincipal.Location = new System.Drawing.Point(0, 0);
             this.panelPrincipal.Name = "panelPrincipal";
-            this.panelPrincipal.Size = new System.Drawing.Size(699, 45);
+            this.panelPrincipal.Size = new System.Drawing.Size(699, 37);
             this.panelPrincipal.TabIndex = 27;
             // 
             // frmBuscar

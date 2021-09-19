@@ -89,7 +89,7 @@ namespace UI
         }
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            frmInterno(new frmEliminar());
+            
         }
         private void btnBuscar_Click(object sender, EventArgs e)
         {

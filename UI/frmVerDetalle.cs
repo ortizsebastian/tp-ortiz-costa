@@ -48,7 +48,6 @@ namespace UI
         {
             Close();
         }
-
     }
 }
 
