@@ -63,6 +63,16 @@ namespace UI.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap image_from_rawpixel_id_2335588_original {
+            get {
+                object obj = ResourceManager.GetObject("image-from-rawpixel-id-2335588-original", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Lista_de_Artículos {
             get {
                 object obj = ResourceManager.GetObject("Lista de Artículos", resourceCulture);
