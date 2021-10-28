@@ -45,10 +45,10 @@ namespace UI
             this.panelSuperior = new System.Windows.Forms.Panel();
             this.btnCerrar = new System.Windows.Forms.Button();
             this.panelInferior = new System.Windows.Forms.Panel();
+            this.lblAutores = new System.Windows.Forms.Label();
             this.panelContenedor = new System.Windows.Forms.Panel();
             this.btnText = new System.Windows.Forms.Button();
             this.dgvArticulos = new System.Windows.Forms.DataGridView();
-            this.lblAutores = new System.Windows.Forms.Label();
             this.panelLateral.SuspendLayout();
             this.panelSuperior.SuspendLayout();
             this.panelInferior.SuspendLayout();
@@ -228,6 +228,16 @@ namespace UI
             this.panelInferior.Size = new System.Drawing.Size(699, 60);
             this.panelInferior.TabIndex = 10;
             // 
+            // lblAutores
+            // 
+            this.lblAutores.AutoSize = true;
+            this.lblAutores.Location = new System.Drawing.Point(489, 40);
+            this.lblAutores.Name = "lblAutores";
+            this.lblAutores.Size = new System.Drawing.Size(205, 17);
+            this.lblAutores.TabIndex = 0;
+            this.lblAutores.Text = "Ortiz Sebastian - Costa Nicolas";
+            this.lblAutores.Click += new System.EventHandler(this.lblAutores_Click);
+            // 
             // panelContenedor
             // 
             this.panelContenedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(22)))), ((int)(((byte)(31)))));
@@ -251,7 +261,7 @@ namespace UI
             this.btnText.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnText.ForeColor = System.Drawing.Color.Black;
             this.btnText.Image = global::UI.Properties.Resources.coollogo_com_7531763;
-            this.btnText.Location = new System.Drawing.Point(153, 17);
+            this.btnText.Location = new System.Drawing.Point(187, 15);
             this.btnText.Name = "btnText";
             this.btnText.Size = new System.Drawing.Size(318, 100);
             this.btnText.TabIndex = 16;
@@ -274,7 +284,7 @@ namespace UI
             this.dgvArticulos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(22)))), ((int)(((byte)(41)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(22)))), ((int)(((byte)(41)))));
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
@@ -284,7 +294,7 @@ namespace UI
             this.dgvArticulos.Cursor = System.Windows.Forms.Cursors.Default;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(22)))), ((int)(((byte)(41)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(142)))), ((int)(((byte)(186)))));
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
@@ -293,13 +303,13 @@ namespace UI
             this.dgvArticulos.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dgvArticulos.EnableHeadersVisualStyles = false;
             this.dgvArticulos.GridColor = System.Drawing.Color.DimGray;
-            this.dgvArticulos.Location = new System.Drawing.Point(50, 120);
+            this.dgvArticulos.Location = new System.Drawing.Point(50, 127);
             this.dgvArticulos.MultiSelect = false;
             this.dgvArticulos.Name = "dgvArticulos";
             this.dgvArticulos.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(22)))), ((int)(((byte)(41)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(142)))), ((int)(((byte)(186)))));
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
@@ -318,15 +328,6 @@ namespace UI
             this.dgvArticulos.ShowRowErrors = false;
             this.dgvArticulos.Size = new System.Drawing.Size(596, 235);
             this.dgvArticulos.TabIndex = 13;
-            // 
-            // lblAutores
-            // 
-            this.lblAutores.AutoSize = true;
-            this.lblAutores.Location = new System.Drawing.Point(489, 40);
-            this.lblAutores.Name = "lblAutores";
-            this.lblAutores.Size = new System.Drawing.Size(205, 17);
-            this.lblAutores.TabIndex = 0;
-            this.lblAutores.Text = "Ortiz Sebastian - Costa Nicolas";
             // 
             // frmMain
             // 

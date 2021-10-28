@@ -23,7 +23,6 @@ namespace UI
             InitializeComponent();
             this.main = main;
         }
-
         private void frmAgregar_Load(object sender, EventArgs e)
         {
             CategoriaNegocio categoria = new CategoriaNegocio();

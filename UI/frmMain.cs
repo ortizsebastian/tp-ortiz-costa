@@ -16,7 +16,6 @@ namespace UI
         {
             InitializeComponent();
         }
-
         private void btnCerrar_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -123,6 +122,11 @@ namespace UI
         private void frmMain_Load(object sender, EventArgs e)
         {
             cargarGrid();
+        }
+
+        private void lblAutores_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Easter Egg descubierto!\n\nMateria: Programación III.\nCatedra: Segundo cuatrimestre 2021.");
         }
     }
 }
